@@ -11,18 +11,21 @@
     <div class="signin-colom">
       <h1 class="text-center">Sign In</h1>
       <hr>
-      <form action="" method="post">
+
+      <form action="{{ route('login') }}" method="post">
+        {{ csrf_field() }}
+
         <div class="form-group form-margin-atas">
           <label for="username">Username</label>
-          <input type="text" class="form-control" id="username" placeholder="Nama User Anda">
+          <input name="username" type="text" class="form-control" id="username" placeholder="Nama User Anda">
         </div>
         <div class="form-group form-margin-bawah">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="username" placeholder="Password Anda">
+          <input name="password" type="password" class="form-control" id="username" placeholder="Password Anda">
         </div>
         <div class="form-group button-margin text-right">
           <button type="clear" class="btn btn-light">Clear</button>
-          <button type="button" class="btn btn-light">Submit</button>
+          <button type="submit" class="btn btn-light">Submit</button>
         </div>
       </form>
     </div>

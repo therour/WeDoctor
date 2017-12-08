@@ -24,7 +24,7 @@ Route::get('/howtobooking', function() {
 });
 
 Route::get('/signin', function() {
-    return view('signin');
+    return redirect('/login');
 });
 
 Route::get('/signup', function() {
@@ -67,10 +67,8 @@ Route::get('/spesialisasi/doctor/doctorschedule', function() {
     return view('doctorschedule');
 });
 
-
+// Autentikasi untuk login dan register
 Auth::routes();
-
-// Auth::get('/register', 'Auth.RegisterController@showRegisterForm')
-// Auth::post('/register' 'Auth.RegisterController@showRegisterForm')
-
+// Auth::get('/login', 'Auth.LoginController@showLoginForm');
+// Auth::post('/login', 'Auth.LoginController@showLoginForm');
 // Route::get('/home', 'HomeController@index')->name('home');

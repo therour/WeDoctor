@@ -5,12 +5,6 @@
 @endsection
 
 @section('content')
-
-@if (count($errors) > 0)
-  @foreach ($errors->all() as $error)  
-  <h3>{{ $error }}</h3>
-  @endforeach
-@endif
 <!-- Sign Up -->
 <section class="container-fluid signup">
   <div class="row signup-row justify-content-md-center align-items-center">
