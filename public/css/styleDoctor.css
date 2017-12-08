@@ -1,0 +1,501 @@
+@media (min-width: 1200px) 
+{ 
+	.doctor
+	{
+		width: 100%;
+		padding: 30px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.header-doctor h1
+	{
+		margin-top: 20px;
+		font-size: 28px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.doctor-colom
+	{
+		margin-left: 30px;
+		margin-right: 30px;
+		padding: 0;
+	}
+	
+	.spesialisasi-background-title
+	{
+		background-image: url(../img/booking/spesialisasi/background_title.png);
+		font-size: 24px;
+	}
+
+	.spesialisasi-background
+	{
+		background-image: url(../img/booking/spesialisasi/background.png);
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+		margin: auto;
+		width: 20rem;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+		margin-top: 20px;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+	
+	.background-profile
+	{
+		width: 319px;
+		height: 160px;
+		background-image: url(../img/booking/doctor/background.png);
+	}
+
+	.fotoprofile
+	{
+		width: 125px;
+		height: 125px;
+		margin: auto;
+		margin-top: 17.5px;
+		margin-bottom: 17.5px;
+	}
+
+	.fotoprofile img
+	{
+		width: 125px;
+		height: 125px;
+	}
+
+	.sertifikat
+	{
+		width: 200px;
+	}
+
+	.doctor-row
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	.doctor-kiri
+	{
+		margin-left: 0;
+	}
+
+	.doctor-kanan
+	{
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) 
+{ 
+	.doctor
+	{
+		width: 100%;
+		padding: 30px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.header-doctor h1
+	{
+		margin-top: 15px;
+		font-size: 24px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.doctor-colom
+	{
+		margin-left: 35px;
+		margin-right: 35px;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+	
+	.spesialisasi-background-title
+	{
+		background-image: url(../img/booking/spesialisasi/background_title.png);
+		font-size: 24px;
+	}
+
+	.spesialisasi-background
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-image: url(../img/booking/spesialisasi/background.png);
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+		margin: auto;
+		width: 17rem;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+		margin-top: 15px;
+		font-size: 15px;
+		padding: 8px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+	
+	.background-profile
+	{
+		width: 267px;
+		height: 155px;
+		background-image: url(../img/booking/doctor/background.png);
+	}
+
+	.fotoprofile
+	{
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		margin-top: 27.5px;
+		margin-bottom: 27.5px;
+	}
+
+	.fotoprofile img
+	{
+		width: 100px;
+		height: 100px;
+	}
+
+	.sertifikat
+	{
+		width: 130px;
+	}
+
+	.doctor-row
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.card-title
+	{
+		font-size: 19px;	
+	}
+
+	table
+	{
+		font-size: 15px;
+	}
+
+	.doctor-kiri
+	{
+		margin-left: 0;
+	}
+
+	.doctor-kanan
+	{
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) 
+{ 
+	.doctor
+	{
+		width: 100%;
+		padding: 30px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.header-doctor h1
+	{
+		margin-top: 15px;
+		font-size: 20px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.doctor-colom
+	{
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-bottom: 15px;
+		padding: 0;
+	}
+
+	.spesialisasi-background
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		background-image: url(../img/booking/spesialisasi/background.png);
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+		margin: auto;
+		width: 15rem;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+		margin-top: 15px;
+		font-size: 15px;
+		padding: 6px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+	
+	.background-profile
+	{
+		width: 235px;
+		height: 115px;
+		background-image: url(../img/booking/doctor/background.png);
+	}
+
+	.fotoprofile
+	{
+		width: 70px;
+		height: 70px;
+		margin: auto;
+		margin-top: 22.5px;
+		margin-bottom: 22.5px;
+	}
+
+	.fotoprofile img
+	{
+		width: 70px;
+		height: 70px;
+	}
+
+	.sertifikat
+	{
+		width: 900px;
+	}
+
+	.doctor-row
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.card-title
+	{
+		font-size: 17px;	
+	}
+
+	table
+	{
+		font-size: 14px;
+	}
+
+	.doctor-kiri
+	{
+		margin-left: 0;
+	}
+
+	.doctor-kanan
+	{
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767px) 
+{ 
+	.doctor
+	{
+		width: 100%;
+		padding: 30px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.header-doctor h1
+	{
+		margin-top: 15px;
+		font-size: 18px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.doctor-colom
+	{
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	.spesialisasi-background
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		background-image: url(../img/booking/spesialisasi/background.png);
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+		margin: auto;
+		width: 15rem;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+		margin-top: 15px;
+		font-size: 15px;
+		padding: 4px;
+		padding-top: 1px;
+		padding-bottom: 1px;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+	
+	.background-profile
+	{
+		width: 235px;
+		height: 115px;
+		background-image: url(../img/booking/doctor/background.png);
+	}
+
+	.fotoprofile
+	{
+		width: 70px;
+		height: 70px;
+		margin: auto;
+		margin-top: 22.5px;
+		margin-bottom: 22.5px;
+	}
+
+	.fotoprofile img
+	{
+		width: 70px;
+		height: 70px;
+	}
+
+	.sertifikat
+	{
+		width: 900px;
+	}
+
+	.doctor-row
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.card-title
+	{
+		font-size: 15px;	
+	}
+
+	table
+	{
+		font-size: 13px;
+	}
+
+	.doctor-kiri
+	{
+		margin-left: 0;
+	}
+
+	.doctor-kanan
+	{
+		margin-right: 0;
+	}
+}
+
+/*@media (max-width: 575px) 
+{ 
+
+}*/

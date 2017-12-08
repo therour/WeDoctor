@@ -1,0 +1,316 @@
+@media (min-width: 1200px) 
+{ 
+	.booking
+	{
+		width: 100%;
+		padding: 30px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.booking-colom
+	{
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.header-booking h1
+	{
+		margin-top: 20px;
+		font-size: 28px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.booking-row
+	{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	.spesialisasi-background-title
+	{
+		background-image: url(../img/booking/spesialisasi/background_title.png);
+		font-size: 24px;
+	}
+
+	.spesialisasi-background
+	{
+		background-image: url(../img/booking/spesialisasi/background.png);
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) 
+{ 
+	.booking
+	{
+		width: 100%;
+		padding: 20px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.booking-colom
+	{
+		margin-left: 20px;
+		margin-right: 20px;
+		padding: 0;
+	}
+
+	.header-booking h1
+	{
+		margin-top: 20px;
+		font-size: 24px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.booking-row
+	{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.spesialisasi-background-title
+	{
+		background-image: url(../img/booking/spesialisasi/background_title.png);
+		font-size: 20px;
+		padding: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.spesialisasi-background
+	{
+		background-image: url(../img/booking/spesialisasi/background.png);
+		padding: 15px;
+		font-size: 16px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+		font-size: 16px;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) 
+{ 
+	.booking
+	{
+		width: 100%;
+		padding: 20px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.booking-colom
+	{
+		margin-left: 10px;
+		margin-right: 10px;
+		padding: 0;
+	}
+
+	.header-booking h1
+	{
+		margin-top: 15px;
+		font-size: 18px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.booking-row
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.spesialisasi-background-title
+	{
+		background-image: url(../img/booking/spesialisasi/background_title.png);
+		font-size: 18px;
+		padding: 10px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+	.spesialisasi-background
+	{
+		background-image: url(../img/booking/spesialisasi/background.png);
+		padding: 10px;
+		font-size: 15px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+		font-size: 14px;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767px) 
+{ 
+	.booking
+	{
+		width: 100%;
+		padding: 20px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.header-booking h1
+	{
+		margin-top: 15px;
+		font-size: 17px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.booking-row
+	{
+		margin-top: 15px;
+		margin-bottom: 25px;
+		padding: 0;
+	}
+
+	.spesialisasi-background-title
+	{
+		background-image: url(../img/booking/spesialisasi/background_title.png);
+		font-size: 16px;
+		padding: 10px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+	.spesialisasi-background
+	{
+		background-image: url(../img/booking/spesialisasi/background.png);
+		font-size: 14px;
+		padding: 10px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+	.spesialisasi-background p
+	{
+		margin-bottom: 0;
+	}
+
+	.border-card
+	{
+		border: 3px solid white;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		border-color: #E62A3D;
+		font-size: 14px;
+		padding: 6px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		border-color: #E62A3D;
+	}
+}
+
+/*@media (max-width: 575px) 
+{ 
+
+}*/
