@@ -56,7 +56,11 @@ Route::get('/booking-step-3', function() {
 });
 
 Route::get('/spesialisasi', function() {
-    return view('spesialisasi');
+    // Untuk akses database
+    $dataSpesialisasi = DB::table('spesialisasi')->get();
+    return view('spesialisasi', [
+        'dataSpesialisasi' => $dataSpesialisasi
+    ]);
 });
 
 Route::get('/spesialisasi/doctor', function() {
