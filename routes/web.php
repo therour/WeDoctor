@@ -72,13 +72,4 @@ Route::get('/spesialisasi/doctor/doctorschedule', function() {
 });
 
 // Autentikasi untuk login dan register otomatis
-   // Auth::routes();
-
-// Routing untuk Registrasi
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegisterController@register');
-
-// Routing untuk Login form not modal
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Auth::routes();
