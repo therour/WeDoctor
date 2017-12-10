@@ -81,7 +81,7 @@
             <!-- Button -->
             <a href="/cekakun"><button type="button" class="btn btn-outline-info float-right">Booking</button></a>
           @else
-            <a href="/booking-step-1"><button type="button" class="btn btn-outline-info float-right">Booking</button></a>
+            <a href="/bookingstep1"><button type="button" class="btn btn-outline-info float-right">Booking</button></a>
           @endguest
 
         </div>

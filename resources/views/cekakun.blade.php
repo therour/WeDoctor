@@ -14,17 +14,20 @@
 					  <div class="card-header">Untuk mengakses halaman booking, anda harus login terlebih dahulu</div>
 					  <div class="card-body text-left">
 					    <!-- Form Login -->
-              <form action="" method="post">
+              <form action="{{ route('login.booking') }}" method="post">
+        				{{ csrf_field() }}
                 <div class="form-group">
                   <label for="username">Username</label>
-                  <input type="text" class="form-control" id="username" placeholder="Nama User Anda">
+                  <input name="username" type="text" class="form-control" id="username" placeholder="Nama User Anda">
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password" class="form-control" id="username" placeholder="Password Anda">
+                  <input name="password" type="password" class="form-control" id="username" placeholder="Password Anda">
+                </div>
+								<div class="form-group">
+              		<button type="submit" class="btn btn-primary float-right">Log In</button>
                 </div>
               </form>
-              <a href='/booking-step-1'><button type="button" class="btn btn-primary float-right">Log In</button></a>
 					  </div>
 					  <div class="card-footer">
 					    <p>Tidak mempunyai akun? Daftar <a href='/signup'>disini</a></p>

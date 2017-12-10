@@ -48,15 +48,15 @@
         return view('cekakun');
     });
 
-    Route::get('/booking-step-1', function() {
+    Route::get('/bookingstep1', function() {
         return view('bookingstep1');
     });
 
-    Route::get('/booking-step-2', function() {
+    Route::get('/bookingstep2', function() {
         return view('bookingstep2');
     });
 
-    Route::get('/booking-step-3', function() {
+    Route::get('/bookingstep3', function() {
         return view('bookingstep3');
     });
 
@@ -83,12 +83,22 @@
 // Autentikasi untuk login dan register otomatis
     Auth::routes();
 
-// Routing untuk USER
+// Routing Login
+    Route::post('/login/utama',
+        [
+            'uses' => 'LoginController@login',
+            'as' => 'login.utama'
+        ]);
+
+    Route::post('/login/booking',
+        [
+            'uses' => 'LoginControllerBooking@login',
+            'as' => 'login.booking'
+        ]);
+
+// Routing untuk kalo dah registrasi dan login
     Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
+    Route::get('/admin', 'AdminController@index')->name('admin');
 
 
 

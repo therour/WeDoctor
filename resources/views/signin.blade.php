@@ -12,16 +12,28 @@
       <h1 class="text-center">Sign In</h1>
       <hr>
 
-      <form action="{{ route('login') }}" method="post">
+      <form action="{{ route('login.utama') }}" method="post">
         {{ csrf_field() }}
 
         <div class="form-group form-margin-atas">
           <label for="username">Username</label>
-          <input name="username" type="text" class="form-control" id="username" placeholder="Nama User Anda">
+          <input name="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" id="username" placeholder="Nama User Anda">
+
+          @if ($errors->has('username'))
+            <div class="invalid-feedback">
+              {{ $errors->first('username') }}
+            </div>
+          @endif
         </div>
         <div class="form-group form-margin-bawah">
           <label for="password">Password</label>
-          <input name="password" type="password" class="form-control" id="username" placeholder="Password Anda">
+          <input name="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" id="username" placeholder="Password Anda">
+
+          @if ($errors->has('password'))
+            <div class="invalid-feedback">
+              {{ $errors->first('password') }}
+            </div>
+          @endif
         </div>
         <div class="form-group button-margin text-right">
           <button type="clear" class="btn btn-light">Clear</button>

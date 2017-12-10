@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+
+    // Tambahan unuk function is admin
+    public function is_admin()
+    {
+        if($this->status_id)
+        {
+            return true;
+        }
+        return false;
+    }
 }

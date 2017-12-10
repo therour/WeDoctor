@@ -106,7 +106,7 @@
       <!-- Button -->
       <div class="form-group button-margin text-right">
         <button type="button" class="btn btn-light">Send</button>
-        <a href='/booking-step-3'><button type="button" class="btn btn-light">Next</button></a>
+        <a href='/bookingstep3'><button type="button" class="btn btn-light">Next</button></a>
       </div>
     </div>
   </div>

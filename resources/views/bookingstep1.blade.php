@@ -85,7 +85,7 @@
         <!-- Button -->
         <div class="form-group button-margin text-right">
           <button type="clear" class="btn btn-light">Clear</button>
-          <a href='/booking-step-2'><button type="button" class="btn btn-light">Submit</button></a>
+          <a href='/bookingstep2'><button type="button" class="btn btn-light">Submit</button></a>
         </div>
       </form>
     </div>
