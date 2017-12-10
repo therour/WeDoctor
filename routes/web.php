@@ -44,6 +44,10 @@
         return view('findrating');
     });
 
+    Route::get('/cekakun', function() {
+        return view('cekakun');
+    });
+
     Route::get('/booking-step-1', function() {
         return view('bookingstep1');
     });

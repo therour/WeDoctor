@@ -78,45 +78,10 @@
           </div>
           
           @guest
-          <!-- Modal Button -->
-          <button type="button" class="btn btn-outline-info float-right" data-toggle="modal" data-target="#login">Booking</button>
-
-          <!-- Modal -->
-          <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">You must Login</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <!-- Form Login -->
-                  <form action="" method="post">
-                    <div class="form-group">
-                      <label for="username">Username</label>
-                      <input type="text" class="form-control" id="username" placeholder="Nama User Anda">
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Password</label>
-                      <input type="password" class="form-control" id="username" placeholder="Password Anda">
-                    </div>
-                  </form>
-                  <!-- Registrasi -->
-                  <p>Tidak mempunyai akun? Daftar <a href='/signup'>disini</a></p>
-                </div>
-                <!-- Button login -->
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <a href='/booking-step-1'><button type="button" class="btn btn-primary">Log In</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+            <!-- Button -->
+            <a href="/cekakun"><button type="button" class="btn btn-outline-info float-right">Booking</button></a>
           @else
-          <a href="/booking-step-1"><button type="button" class="btn btn-outline-info float-right">Booking</button></a>
+            <a href="/booking-step-1"><button type="button" class="btn btn-outline-info float-right">Booking</button></a>
           @endguest
 
         </div>
