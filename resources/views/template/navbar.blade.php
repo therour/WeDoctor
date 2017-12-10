@@ -15,17 +15,20 @@
 
           @guest <!-- Untuk Tamu -->
           <ul>
-            <li class="text-center"><a href='/signin'><img src="{{asset('/img/icon/signin2.png')}}" alt="Error load image"> Sign In</a></li>
-            <li class="text-center"><a href='/signup'><img src="{{asset('/img/icon/signup2.png')}}" alt="Error load image"> Sign Up</a></li>
+            <li class="text-center"><a href='/signin'><img src="{{asset('/img/icon/signin.png')}}" alt="Error load image"> Sign In</a></li>
+            <li class="text-center"><a href='/signup'><img src="{{asset('/img/icon/signup.png')}}" alt="Error load image"> Sign Up</a></li>
           </ul>
           @else <!-- Untuk user yang udah login -->
           <ul>
-            <li class="text-center"><a href='/signin'><img src="{{asset('/img/icon/signin2.png')}}" alt="Error load image"> Profil</a></li>
-            <li class="text-center"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><img src="{{asset('/img/icon/signup2.png')}}" alt="Error load image"> Log Out</a></li>
+            <li class="text-center"><a href='/profil'><img src="{{asset('/img/icon/profile.png')}}" alt="Error load image"> Profil</a></li>
+
+            <!-- LOGOUT -->
+            <li class="text-center"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><img src="{{asset('/img/icon/logout.png')}}" alt="Error load image"> Log Out</a></li>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}
             </form>
+
           </ul>
           @endguest
 
@@ -71,7 +74,7 @@
         <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{{ Request::is('riwayat') ? ' active aktif' : ''}}" href='/about'>Riwayat</a>
+        <a class="nav-link{{ Request::is('riwayat') ? ' active aktif' : ''}}" href='/riwayat'>Riwayat</a>
       </li>
       @endguest
     </ul>

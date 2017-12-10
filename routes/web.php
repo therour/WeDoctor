@@ -71,5 +71,9 @@ Route::get('/spesialisasi/doctor/doctorschedule', function() {
     return view('doctorschedule');
 });
 
+// Route::get('/riwayat', function() {
+//     return view('riwayat');
+// });
+
 // Autentikasi untuk login dan register otomatis
 Auth::routes();
