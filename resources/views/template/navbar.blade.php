@@ -48,34 +48,34 @@
   <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
     <ul class="nav justify-content-center">
       @guest
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('/') ? ' active aktif' : ''}}" href='/'>Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('spesialisasi') || Request::is('spesialisasi/doctor') || Request::is('spesialisasi/doctor/doctorschedule') ? ' active aktif' : ''}}" href='/spesialisasi'>Booking</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>How to Booking</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>About</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('/') ? ' active aktif' : ''}}" href='/'>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('spesialisasi') || Request::is('spesialisasi/doctor') || Request::is('spesialisasi/doctor/doctorschedule') ? ' active aktif' : ''}}" href='/spesialisasi'>Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>How to Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>About</a>
+        </li>
       @else
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('/') ? ' active aktif' : ''}}" href='/'>Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('spesialisasi') ? ' active aktif' : ''}}" href='/spesialisasi'>Booking</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>How to Booking</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link{{ Request::is('riwayat') ? ' active aktif' : ''}}" href='/riwayat'>Riwayat</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('home') ? ' active aktif' : ''}}" href='/home'>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('spesialisasi') ? ' active aktif' : ''}}" href='/spesialisasi'>Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>How to Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('riwayat') ? ' active aktif' : ''}}" href='/riwayat'>Riwayat</a>
+        </li>
       @endguest
     </ul>
   </div>

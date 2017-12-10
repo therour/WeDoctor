@@ -11,69 +11,80 @@
 |
 */
 
-Route::get('/', function() {
-    return view('home');
-});
+// Routing untuk GUEST
+    Route::get('/', function() {
+        return view('home');
+    });
 
-Route::get('/about', function() {
-    return view('about');
-});
+    Route::get('/about', function() {
+        return view('about');
+    });
 
-Route::get('/howtobooking', function() {
-    return view('howtobooking');
-});
+    Route::get('/howtobooking', function() {
+        return view('howtobooking');
+    });
 
-Route::get('/signin', function() {
-    return redirect('/login');
-});
+    Route::get('/signin', function() {
+        return redirect('/login');
+    });
 
-Route::get('/signup', function() {
-    return redirect('/register');
-});
+    Route::get('/signup', function() {
+        return redirect('/register');
+    });
 
-Route::get('/findmaps', function() {
-    return view('findmaps');
-});
+    Route::get('/findmaps', function() {
+        return view('findmaps');
+    });
 
-Route::get('/findjadwal', function() {
-    return view('findjadwal');
-});
+    Route::get('/findjadwal', function() {
+        return view('findjadwal');
+    });
 
-Route::get('/findrating', function() {
-    return view('findrating');
-});
+    Route::get('/findrating', function() {
+        return view('findrating');
+    });
 
-Route::get('/booking-step-1', function() {
-    return view('bookingstep1');
-});
+    Route::get('/booking-step-1', function() {
+        return view('bookingstep1');
+    });
 
-Route::get('/booking-step-2', function() {
-    return view('bookingstep2');
-});
+    Route::get('/booking-step-2', function() {
+        return view('bookingstep2');
+    });
 
-Route::get('/booking-step-3', function() {
-    return view('bookingstep3');
-});
+    Route::get('/booking-step-3', function() {
+        return view('bookingstep3');
+    });
 
-Route::get('/spesialisasi', function() {
-    // Untuk akses database
-    $dataSpesialisasi = DB::table('spesialisasi')->get();
-    return view('spesialisasi', [
-        'dataSpesialisasi' => $dataSpesialisasi
-    ]);
-});
+    Route::get('/spesialisasi', function() {
+        // Untuk akses database
+        $dataSpesialisasi = DB::table('spesialisasi')->get();
+        return view('spesialisasi', [
+            'dataSpesialisasi' => $dataSpesialisasi
+        ]);
+    });
 
-Route::get('/spesialisasi/doctor', function() {
-    return view('doctor');
-});
+    Route::get('/spesialisasi/doctor', function() {
+        return view('doctor');
+    });
 
-Route::get('/spesialisasi/doctor/doctorschedule', function() {
-    return view('doctorschedule');
-});
+    Route::get('/spesialisasi/doctor/doctorschedule', function() {
+        return view('doctorschedule');
+    });
 
-// Route::get('/riwayat', function() {
-//     return view('riwayat');
-// });
+    // Route::get('/riwayat', function() {
+    //     return view('riwayat');
+    // });
 
 // Autentikasi untuk login dan register otomatis
-Auth::routes();
+    Auth::routes();
+
+// Routing untuk USER
+    Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+
+
+

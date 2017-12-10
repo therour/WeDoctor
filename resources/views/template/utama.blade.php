@@ -20,7 +20,7 @@
   </head>
   <body>
     @include('template.navbar')    
-    
+
     @yield('content')
 
     <section class="container-fluid footer-copyright">

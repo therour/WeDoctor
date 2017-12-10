@@ -9,6 +9,15 @@
 @endsection
 
 @section('content')
+
+@auth
+<div class="alert alert-success" role="alert">
+  <div class="text-center">
+    Selamat datang {{ Auth::user()->nama }}
+  </div>
+</div>
+@endauth
+
 <!-- Isi home 1 (HOME) -->
 <div class="home col-md-12">
     <!-- Import gambar background lewat css -->
