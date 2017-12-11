@@ -5,9 +5,18 @@ namespace App\Http\Controllers;
 use Auth;
 use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
+    use AuthenticatesUsers;
+
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
+
     public function login(Request $request)
     {
     	// Cek inputannya
