@@ -83,22 +83,9 @@
 // Autentikasi untuk login dan register otomatis
     Auth::routes();
 
-// Routing Login
-    Route::post('/login/utama',
-        [
-            'uses' => 'LoginController@login',
-            'as' => 'login.utama'
-        ]);
-
-    Route::post('/login/booking',
-        [
-            'uses' => 'LoginControllerBooking@login',
-            'as' => 'login.booking'
-        ]);
-
 // Routing untuk kalo dah registrasi dan login
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/admin', 'AdminController@index')->name('admin');
+    
 
 
 

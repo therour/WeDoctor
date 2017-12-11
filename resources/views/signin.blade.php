@@ -12,7 +12,7 @@
       <h1 class="text-center">Sign In</h1>
       <hr>
 
-      <form action="{{ route('login.utama') }}" method="post">
+      <form action="{{ route('login') }}" method="post">
         {{ csrf_field() }}
 
         <div class="form-group form-margin-atas">
