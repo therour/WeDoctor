@@ -82,11 +82,6 @@
             <td></td>
           </tr>
           <tr>
-            <td>Ruangan</td>
-            <td>:</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>Doctor Tujuan</td>
             <td>:</td>
             <td></td>

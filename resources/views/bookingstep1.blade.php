@@ -35,20 +35,14 @@
       <form class="padding-booking" action="" method="post">
         <div class="bungkus-form">
           <!-- Nama -->
-          <div class="form-row">
-            <div class="form-group col-sm-6">
-              <label class="label-font-size" for="namaDepan">Nama Depan</label>
-              <input type="text" class="form-control input-size" id="inputEmail4" placeholder="Nama Depan">
-            </div>
-            <div class="form-group col-sm-6">
-              <label class="label-font-size" for="namaBelakang">Nama Belakang</label>
-              <input type="text" class="form-control input-size" id="inputPassword4" placeholder="Nama Belakang">
-            </div>
+          <div class="form-group">
+            <label class="label-font-size" for="nama">Nama Pasien</label>
+            <input name="nama" type="text" class="form-control input-size" id="inputEmail4" placeholder="Nama Pasien">
           </div>
           <!-- Tanggal Lahir -->
           <div class="form-group">
             <label class="label-font-size" for="tanggalLahir">Tanggal Lahir</label>
-            <input type="date" class="form-control input-size" id="tanggalLahir">
+            <input name="tanggalLahir" type="date" class="form-control input-size" id="tanggalLahir">
           </div>
           <!-- Jenis Kelamin -->
           <div class="form-row">
@@ -56,7 +50,7 @@
               <label class="label-font-size" for="jenisKelamin">Jenis Kelamin</label>
               <div class="input-group">
                 <span class="input-group-addon input-size">
-                  <input type="radio" aria-label="Radio button for following text input" name="jenisKelamin">
+                  <input type="radio" aria-label="Radio button for following text input" name="jenisKelamin" value="Laki-laki">
                 </span>
                 <input type="text" class="form-control input-size" aria-label="Text input with radio button" value="Laki-laki" readonly>
               </div>
@@ -64,7 +58,7 @@
             <div class="form-group col-sm-6">
               <div class="input-group j-k-margin">
                 <span class="input-group-addon input-size">
-                  <input type="radio" aria-label="Radio button for following text input" name="jenisKelamin">
+                  <input type="radio" aria-label="Radio button for following text input" name="jenisKelamin" value="Laki-laki">
                 </span>
                 <input type="text" class="form-control input-size" aria-label="Text input with radio button" value="Perempuan" readonly>
               </div>
@@ -73,12 +67,12 @@
           <!-- Alamat -->
           <div class="form-group">
             <label class="label-font-size" for="alamat">Alamat</label>
-            <input type="text" class="form-control input-size" id="alamat" placeholder="Alamat pasien">
+            <input name="alamat" type="text" class="form-control input-size" id="alamat" placeholder="Alamat pasien">
           </div>
           <!-- Riwayat Penyakit -->
           <div class="form-group">
             <label class="label-font-size" for="riwayatPenyakit">Riwayat Penyakit</label>
-            <textarea class="form-control input-size" id="riwayatPenyakit" rows="3"></textarea>
+            <textarea name="riwayatSakit" class="form-control input-size" id="riwayatPenyakit" rows="3"></textarea>
           </div>
         </div>
         
