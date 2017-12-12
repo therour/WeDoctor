@@ -12,80 +12,28 @@
 */
 
 // Routing untuk GUEST
-    Route::get('/', function() {
-        return view('home');
-    });
-
-    Route::get('/about', function() {
-        return view('about');
-    });
-
-    Route::get('/howtobooking', function() {
-        return view('howtobooking');
-    });
-
-    Route::get('/signin', function() {
-        return redirect('/login');
-    });
-
-    Route::get('/signup', function() {
-        return redirect('/register');
-    });
-
-    Route::get('/findmaps', function() {
-        return view('findmaps');
-    });
-
-    Route::get('/findjadwal', function() {
-        return view('findjadwal');
-    });
-
-    Route::get('/findrating', function() {
-        return view('findrating');
-    });
-
-    Route::get('/cekakun', function() {
-        return view('cekakun');
-    });
-
-    Route::get('/bookingstep1', function() {
-        return view('bookingstep1');
-    });
-
-    Route::get('/bookingstep2', function() {
-        return view('bookingstep2');
-    });
-
-    Route::get('/bookingstep3', function() {
-        return view('bookingstep3');
-    });
-
-    Route::get('/spesialisasi', function() {
-        // Untuk akses database
-        $dataSpesialisasi = DB::table('spesialisasi')->get();
-        return view('spesialisasi', [
-            'dataSpesialisasi' => $dataSpesialisasi
-        ]);
-    });
-
-    Route::get('/spesialisasi/doctor', function() {
-        return view('doctor');
-    });
-
-    Route::get('/spesialisasi/doctor/doctorschedule', function() {
-        return view('doctorschedule');
-    });
-
-    // Route::get('/riwayat', function() {
-    //     return view('riwayat');
-    // });
+    Route::get('/', 'GuestViewController@getViewHome');
+    Route::get('/about', 'GuestViewController@getViewAbout');
+    Route::get('/howtobooking', 'GuestViewController@getViewHowToBooking');
+    Route::get('/signin', 'GuestViewController@getViewSignIn');
+    Route::get('/signup', 'GuestViewController@getViewSignUp');
+    Route::get('/findmaps', 'GuestViewController@getViewFindMaps');
+    Route::get('/findjadwal', 'GuestViewController@getViewFindJadwal');
+    Route::get('/findrating', 'GuestViewController@getViewFindRating');
+    Route::get('/cekakun', 'GuestViewController@getViewCekAkun');
+    Route::get('/spesialisasi', 'GuestViewController@getViewSpesialisasi');
+    Route::get('/spesialisasi/doctor', 'GuestViewController@getViewDoctor');
+    Route::get('/spesialisasi/doctor/doctorschedule', 'GuestViewController@getViewDoctorSchedule');
+    // Route::get('/riwayat', 'GuestViewController@getViewHome');
 
 // Autentikasi untuk login dan register otomatis
     Auth::routes();
 
 // Routing untuk kalo dah registrasi dan login
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@getView')->name('home');
+    Route::get('/admin', 'AdminController@getView')->name('admin');
+
+    Route::get('/bookingstep1', 'BookingController@getViewStep1');
+    Route::get('/bookingstep2', 'BookingController@getViewStep2');
+    Route::get('/bookingstep3', 'BookingController@getViewStep3');
     
-
-
-

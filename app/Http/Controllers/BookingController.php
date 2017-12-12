@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class BookingController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -13,7 +13,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('admin');
+        $this->middleware('auth');
     }
 
     /**
@@ -21,8 +21,18 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getView()
+    public function getViewStep1()
     {
-        return view('admin');
+        return view('bookingstep1');
+    }
+
+    public function getViewStep2()
+    {
+        return view('bookingstep2');
+    }
+
+    public function getViewStep3()
+    {
+        return view('bookingstep3');
     }
 }

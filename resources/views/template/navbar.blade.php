@@ -2,14 +2,18 @@
 <nav class="navbar navbar-default nav-atas" id="upPage">
   <div class="container-fluid container-navigasi">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
+      @guest
+      <a class="navbar-brand" href='/'>
+      @else
+      <a class="navbar-brand" href='/home'>
+      @endguest
         <img src="{{asset('img/navigasi/logo.png')}}" alt="Error load image">
       </a>
     </div>
     <div class="akun justify-content-end">
       <ul class="akun nav">
         <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link">
             <img src="{{asset('img/navigasi/akun.png')}}" alt="Error load image" width="80">
           </a>
 
