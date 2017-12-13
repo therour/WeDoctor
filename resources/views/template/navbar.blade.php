@@ -24,7 +24,7 @@
           </ul>
           @else <!-- Untuk user yang udah login -->
           <ul>
-            <li class="text-center"><a href='/profil'><img src="{{asset('/img/icon/profile.png')}}" alt="Error load image"> Profil</a></li>
+            <li class="text-center"><a href='/profile'><img src="{{asset('/img/icon/profile.png')}}" alt="Error load image"> Profil</a></li>
 
             <!-- LOGOUT -->
             <li class="text-center"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><img src="{{asset('/img/icon/logout.png')}}" alt="Error load image"> Log Out</a></li>

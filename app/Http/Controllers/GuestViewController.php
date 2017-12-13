@@ -78,4 +78,9 @@ class GuestViewController extends Controller
     {
         return view('riwayat');
     }
+
+    public function getViewProfile()
+    {
+        return view('profile');
+    }
 }

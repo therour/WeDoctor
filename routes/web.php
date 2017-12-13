@@ -24,16 +24,24 @@
     Route::get('/spesialisasi', 'GuestViewController@getViewSpesialisasi');
     Route::get('/spesialisasi/doctor', 'GuestViewController@getViewDoctor');
     Route::get('/spesialisasi/doctor/doctorschedule', 'GuestViewController@getViewDoctorSchedule');
-    // Route::get('/riwayat', 'GuestViewController@getViewHome');
+    Route::get('/riwayat', 'GuestViewController@getViewRiwayat');
+    Route::get('/profile', 'GuestViewController@getViewProfile');
 
 // Autentikasi untuk login dan register otomatis
     Auth::routes();
 
 // Routing untuk kalo dah registrasi dan login
     Route::get('/home', 'HomeController@getView')->name('home');
-    Route::get('/admin', 'AdminController@getView')->name('admin');
+    Route::get('/admin', 'AdminController@getViewHome')->name('admin');
 
     Route::get('/bookingstep1', 'BookingController@getViewStep1');
     Route::get('/bookingstep2', 'BookingController@getViewStep2');
     Route::get('/bookingstep3', 'BookingController@getViewStep3');
     
+    Route::get('/admin/spesialisasi', 'AdminController@getViewSpesialisasi');
+    Route::get('/admin/spesialisasi/edit', 'AdminController@getViewEditSpesialisasi');
+    Route::get('/admin/spesialisasi/tambah', 'AdminController@getViewTambahSpesialisasi');
+    Route::get('/admin/doctor', 'AdminController@getViewDoctor');
+    Route::get('/admin/doctor/edit', 'AdminController@getViewEditDoctor');
+    Route::get('/admin/doctor/tambah', 'AdminController@getViewTambahDoctor');
+    Route::get('/admin/user', 'AdminController@getViewUser');
