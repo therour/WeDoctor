@@ -34,7 +34,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS offline-->
     <script type="text/javascript" src="{{asset('/js/jquery-3.2.1.min.js')}}"></script>
     @yield('js')
-    <script type="text/javascript" src="{{asset('/js/app.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>

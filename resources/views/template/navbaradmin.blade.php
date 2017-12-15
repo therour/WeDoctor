@@ -39,10 +39,10 @@
         <a class="nav-link{{ Request::is('admin') ? ' active aktif' : ''}}" href='/admin'>Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{{ Request::is('admin/spesialisasi') ? ' active aktif' : ''}}" href='/admin/spesialisasi'>Spesialisasi's</a>
+        <a class="nav-link{{ Request::is('admin/spesialisasi') || Request::is('admin/spesialisasi/edit') || Request::is('admin/spesialisasi/tambah') ? ' active aktif' : ''}}" href='/admin/spesialisasi'>Spesialisasi's</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{{ Request::is('admin/doctor') ? ' active aktif' : ''}}" href='/admin/doctor'>Doctor's</a>
+        <a class="nav-link{{ Request::is('admin/doctor') || Request::is('admin/doctor/edit') || Request::is('admin/doctor/tambah') ? ' active aktif' : ''}}" href='/admin/doctor'>Doctor's</a>
       </li>
       <li class="nav-item">
         <a class="nav-link{{ Request::is('admin/user') ? ' active aktif' : ''}}" href='/admin/user'>User's</a>

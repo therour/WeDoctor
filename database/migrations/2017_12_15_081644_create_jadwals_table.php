@@ -1,10 +1,9 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSpesialisasisTable extends Migration
+class CreateJadwalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +12,13 @@ class CreateSpesialisasisTable extends Migration
      */
     public function up()
     {
-        Schema::create('spesialisasis', function (Blueprint $table) {
+        Schema::create('jadwals', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama_spesialisasi');
-            $table->text('deskripsi_spesialisasi');
+            $table->string('hari');
+            $table->string('tanggal');
+            $table->string('waktu_mulai');
+            $table->string('waktu_akhir');
+            $table->string('tempat');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateSpesialisasisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spesialisasis');
+        Schema::dropIfExists('jadwals');
     }
 }

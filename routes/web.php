@@ -22,7 +22,7 @@
     Route::get('/findrating', 'GuestViewController@getViewFindRating');
     Route::get('/cekakun', 'GuestViewController@getViewCekAkun');
     Route::get('/spesialisasi', 'GuestViewController@getViewSpesialisasi');
-    Route::get('/spesialisasi/doctor', 'GuestViewController@getViewDoctor');
+    Route::get('/spesialisasi/{spesialisasi}', 'GuestViewController@getViewDoctor');
     Route::get('/spesialisasi/doctor/doctorschedule', 'GuestViewController@getViewDoctorSchedule');
     Route::get('/riwayat', 'GuestViewController@getViewRiwayat');
     Route::get('/profile', 'GuestViewController@getViewProfile');
@@ -37,11 +37,23 @@
     Route::get('/bookingstep1', 'BookingController@getViewStep1');
     Route::get('/bookingstep2', 'BookingController@getViewStep2');
     Route::get('/bookingstep3', 'BookingController@getViewStep3');
-    
+
+// Routing ADMIN SPESIALISASI
     Route::get('/admin/spesialisasi', 'AdminController@getViewSpesialisasi');
-    Route::get('/admin/spesialisasi/edit', 'AdminController@getViewEditSpesialisasi');
+    Route::get('/admin/spesialisasi/edit/{id}', 'AdminController@getViewEditSpesialisasi');
+    Route::put('/admin/spesialisasi/edit/{id}', 'AdminController@editSpesialisasi');
     Route::get('/admin/spesialisasi/tambah', 'AdminController@getViewTambahSpesialisasi');
+    Route::post('/admin/spesialisasi/tambah', 'AdminController@tambahSpesialisasi');
+    Route::delete('/admin/spesialisasi/delete/{id}', 'AdminController@deleteSpesialisasi');
+
+// Routing ADMIN DOCTOR
     Route::get('/admin/doctor', 'AdminController@getViewDoctor');
-    Route::get('/admin/doctor/edit', 'AdminController@getViewEditDoctor');
+    Route::get('/admin/doctor/edit/{id}', 'AdminController@getViewEditDoctor');
+    Route::put('/admin/doctor/edit/{id}', 'AdminController@editDoctor');
     Route::get('/admin/doctor/tambah', 'AdminController@getViewTambahDoctor');
+    Route::post('/admin/doctor/tambah', 'AdminController@tambahDoctor');
+    Route::delete('/admin/doctor/delete/{id}', 'AdminController@deleteDoctor');
+
+// Routing ADMIN USER
     Route::get('/admin/user', 'AdminController@getViewUser');
+

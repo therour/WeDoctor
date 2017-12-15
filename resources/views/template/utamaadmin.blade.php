@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/css/styleNavigasi.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/styleFooterCopyright.css')}}">
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"> -->
     @yield('cssadmin')
 
   </head>
@@ -33,8 +35,8 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS offline-->
     <script type="text/javascript" src="{{asset('/js/jquery-3.2.1.min.js')}}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script> -->
     @yield('jsadmin')
-    <script type="text/javascript" src="{{asset('/js/app.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Spesialisasi;
 
 class GuestViewController extends Controller
 {
@@ -64,9 +65,10 @@ class GuestViewController extends Controller
         return view('spesialisasi', ['dataSpesialisasi' => $dataSpesialisasi]);
     }
 
-    public function getViewDoctor()
+    public function getViewDoctor(Spesialisasi $spesialisasi)
     {
-        return view('doctor');
+        $doctors = $spesialisasi->doctors()->get();
+        return view('doctor', ['doctors' => $doctors]);
     }
 
     public function getViewDoctorSchedule()
