@@ -13,7 +13,7 @@
   </div>
 
   <div class="row">
-  @foreach($doctors as $doctors)
+  @foreach($doctors as $doctor)
     <div class="col-sm-6 col-md-4">
       <div class="card border-card">
         <div class="background-profile">
@@ -24,12 +24,12 @@
         </div>
 
         <div class="card-body spesialisasi-background">
-          <h4 class="card-title">{{ $doctors->nama_doctor }}</h4>
+          <h4 class="card-title">{{ $doctor->nama_doctor }}</h4>
           <table>
             <tr>
               <td width="100px">Spesialisasi</td>
               <td width="20px">: </td>
-              <td>{{ $doctors->spesialisasi->nama_spesialisasi }}</td>
+              <td>{{ $doctor->spesialisasi->nama_spesialisasi }}</td>
             </tr>
             <tr>
               <td>Rating</td>
@@ -39,15 +39,15 @@
             <tr>
               <td>Alamat</td>
               <td>: </td>
-              <td>{{ $doctors->alamat_doctor }}</td>
+              <td>{{ $doctor->alamat_doctor }}</td>
             </tr>
             <tr>
               <td>Pengalaman</td>
               <td>: </td>
-              <td>{{ $doctors->pengalaman_doctor }}</td>
+              <td>{{ $doctor->pengalaman_doctor }}</td>
             </tr>
           </table>
-          <a href='/spesialisasi/doctor/doctorschedule'><button type="button" class="btn btn-outline-info float-right">View Profil Doctor and Schedule</button></a>
+          <a href='/spesialisasi/doctor/doctorschedule/{{$doctor->id}}'><button type="button" class="btn btn-outline-info float-right">View Profil Doctor and Schedule</button></a>
         </div>
       </div>
     </div>

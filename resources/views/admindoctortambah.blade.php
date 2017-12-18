@@ -9,7 +9,7 @@
 <!-- Admin Spesialisasi -->
 <section class="container-fluid about">
     <div class="row-center">
-      <div class="col-sm-12 about-colom text-left">
+      <div class="col-sm-12 about-colom text-left clearfix">
         <h1>Tambah Doctor</h1>
 
         <form action="/admin/doctor/tambah" method="POST">
@@ -25,9 +25,10 @@
           <div class="form-group row">
             <label for="pengalaman_doctor" class="col-sm-2 col-form-label"><b>Spesialisasi Doctor</b></label>
             <div class="col-sm-10">
-              <select name="spesialisasi_doctor" class="selectpicker" data-live-search="true">
+              <select name="spesialisasi_doctor" class="form-control">
+                <option value="NULL">-- Silahkan Pilih Spesialisasi --</option>
                 @foreach($spesialisasi_nama as $nama)
-                  <option data-tokens="#" value="{{$nama->id}}">{{ $nama->nama_spesialisasi }}</option>
+                  <option value="{{$nama->id}}">{{ $nama->nama_spesialisasi }}</option>
                 @endforeach
               </select>
             </div>
@@ -46,9 +47,96 @@
               <textarea name="pengalaman_doctor" class="form-control" id="pengalaman_doctor" rows="3"></textarea>
             </div>
           </div>
-          
-          
-
+          <!-- Jadwal 1 -->
+          <div class="form-group row">
+            <label for="jadwal_doctor" class="col-sm-2 col-form-label"><b>Jadwal Doctor</b></label>
+            <div class="col-sm-3">
+              <select name="hari" class="form-control">
+                <option value="NULL">-- Silahkan Pilih Hari --</option>
+                <option value="Senin">Senin</option>
+                <option value="Selasa">Selasa</option>
+                <option value="Rabu">Rabu</option>
+                <option value="Kamis">Kamis</option>
+                <option value="Jumat">Jumat</option>
+                <option value="Sabtu">Sabtu</option>
+                <option value="Minggu">Minggu</option>
+              </select>
+            </div>
+            <div class="col-sm-2">
+              <input name="waktu_mulai" type="time" class="form-control" id="waktu_mulai" data-toggle="tooltip" data-placement="bottom" title="Waktu Mulai">
+            </div>
+            <div class="col-sm-2">
+              <input name="waktu_akhir" type="time" class="form-control" id="waktu_akhir" data-toggle="tooltip" data-placement="bottom" title="Waktu Berakhir">
+            </div>
+            <div class="col-sm-3">
+              <select name="tempat" class="form-control">
+                <option value="NULL">-- Silahkan Pilih Tempat Praktik --</option>
+                @foreach($tempat as $tempate)
+                  <option value="{{$tempate->id}}">{{ $tempate->tempat }}</option>
+                @endforeach
+              </select>
+            </div>
+          </div>
+          <!-- Jadwal 2 -->
+          <div class="form-group row">
+            <label for="jadwal_doctor" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-3">
+              <select name="hari" class="form-control">
+                <option value="NULL">-- Silahkan Pilih Hari --</option>
+                <option value="Senin">Senin</option>
+                <option value="Selasa">Selasa</option>
+                <option value="Rabu">Rabu</option>
+                <option value="Kamis">Kamis</option>
+                <option value="Jumat">Jumat</option>
+                <option value="Sabtu">Sabtu</option>
+                <option value="Minggu">Minggu</option>
+              </select>
+            </div>
+            <div class="col-sm-2">
+              <input name="waktu_mulai" type="time" class="form-control" id="waktu_mulai" data-toggle="tooltip" data-placement="bottom" title="Waktu Mulai">
+            </div>
+            <div class="col-sm-2">
+              <input name="waktu_akhir" type="time" class="form-control" id="waktu_akhir" data-toggle="tooltip" data-placement="bottom" title="Waktu Berakhir">
+            </div>
+            <div class="col-sm-3">
+              <select name="tempat" class="form-control">
+                <option value="NULL">-- Silahkan Pilih Tempat Praktik --</option>
+                @foreach($tempat as $tempate)
+                  <option value="{{$tempate->id}}">{{ $tempate->tempat }}</option>
+                @endforeach
+              </select>
+            </div>
+          </div>
+          <!-- Jadwal 3 -->
+          <div class="form-group row">
+            <label for="jadwal_doctor" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-3">
+              <select name="hari" class="form-control">
+                <option value="NULL">-- Silahkan Pilih Hari --</option>
+                <option value="Senin">Senin</option>
+                <option value="Selasa">Selasa</option>
+                <option value="Rabu">Rabu</option>
+                <option value="Kamis">Kamis</option>
+                <option value="Jumat">Jumat</option>
+                <option value="Sabtu">Sabtu</option>
+                <option value="Minggu">Minggu</option>
+              </select>
+            </div>
+            <div class="col-sm-2">
+              <input name="waktu_mulai" type="time" class="form-control" id="waktu_mulai" data-toggle="tooltip" data-placement="bottom" title="Waktu Mulai">
+            </div>
+            <div class="col-sm-2">
+              <input name="waktu_akhir" type="time" class="form-control" id="waktu_akhir" data-toggle="tooltip" data-placement="bottom" title="Waktu Berakhir">
+            </div>
+            <div class="col-sm-3">
+              <select name="tempat" class="form-control">
+                <option value="NULL">-- Silahkan Pilih Tempat Praktik --</option>
+                @foreach($tempat as $tempate)
+                  <option value="{{$tempate->id}}">{{ $tempate->tempat }}</option>
+                @endforeach
+              </select>
+            </div>
+          </div>
 
           <button type="submit" class="btn btn-outline-info float-right">Tambah</button>
         </form>

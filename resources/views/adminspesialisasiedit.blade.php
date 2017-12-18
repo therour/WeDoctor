@@ -10,7 +10,7 @@
 <section class="container-fluid about">
   <div class="container-fluid">
     <div class="row-center">
-      <div class="col-sm-12 about-colom text-left">
+      <div class="col-sm-12 about-colom text-left clearfix">
         <h1>Edit Spesialisasi</h1>
 
         <form action="/admin/spesialisasi/edit/{{ $dataSpesialisasi->id }}" method="POST">

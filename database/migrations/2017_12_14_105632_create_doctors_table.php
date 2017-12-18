@@ -19,8 +19,7 @@ class CreateDoctorsTable extends Migration
             $table->string('alamat_doctor');
             $table->string('pengalaman_doctor');
             $table->integer('spesialisasi_id')->unsigned()->index();
-            $table->integer('jadwal_id')->unsigned()->index();
-            $table->integer('rating_id')->unsigned()->index();
+            // $table->integer('rating_id')->unsigned()->index();
             $table->timestamps();
         });
     }

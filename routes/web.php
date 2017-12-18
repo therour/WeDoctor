@@ -22,8 +22,8 @@
     Route::get('/findrating', 'GuestViewController@getViewFindRating');
     Route::get('/cekakun', 'GuestViewController@getViewCekAkun');
     Route::get('/spesialisasi', 'GuestViewController@getViewSpesialisasi');
-    Route::get('/spesialisasi/{spesialisasi}', 'GuestViewController@getViewDoctor');
-    Route::get('/spesialisasi/doctor/doctorschedule', 'GuestViewController@getViewDoctorSchedule');
+    Route::get('/spesialisasi/doctor/{id}', 'GuestViewController@getViewDoctor');
+    Route::get('/spesialisasi/doctor/doctorschedule/{id}', 'GuestViewController@getViewDoctorSchedule');
     Route::get('/riwayat', 'GuestViewController@getViewRiwayat');
     Route::get('/profile', 'GuestViewController@getViewProfile');
 

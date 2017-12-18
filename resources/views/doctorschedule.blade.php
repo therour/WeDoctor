@@ -22,13 +22,14 @@
             <!-- Import background -->
             <img src="{{asset('/img/booking/doctor/doctor.png')}}" alt="Error load image" class="rounded-circle pict-doctor">
           </div>
+          @foreach($doctors as $doctor)
           <div class="card-kanan float-left">
-            <h4 class="margin-top-card-title">Nama Dokter</h4>
+            <h4 class="margin-top-card-title">{{ $doctor->nama_doctor }}</h4>
             <table class="card-text">
               <tr>
                 <td width="100px">Spesialisasi</td>
                 <td width="20px">: </td>
-                <td>abcdefghij</td>
+                <td>{{ $doctor->spesialisasi->nama_spesialisasi }}</td>
               </tr>
               <tr>
                 <td>Rating</td>
@@ -38,34 +39,27 @@
               <tr>
                 <td>Alamat</td>
                 <td>: </td>
-                <td>abcdefghij</td>
+                <td>{{ $doctor->alamat_doctor }}</td>
               </tr>
               <tr>
                 <td>Pengalaman</td>
                 <td>: </td>
-                <td>abcdefghij</td>
+                <td>{{ $doctor->pengalaman_doctor }}</td>
               </tr>
             </table>
+            @endforeach
 
             <!-- Jadwal -->
             <h4 class="card-title">Jadwal Dokter</h4>
+            @foreach($jadwals as $jadwal)
             <div class="custom-controls-stacked">
               <label class="custom-control custom-radio">
                 <input id="jadwalDoctor" name="jadwalDoctor" type="radio" class="custom-control-input">
                 <span class="custom-control-indicator"></span>
-                <span class="custom-control-description custom-control-description-font">Senin : 16.00-18.00 (Rs Panti Rapuh)</span>
-              </label>
-              <label class="custom-control custom-radio">
-                <input id="jadwalDoctor" name="jadwalDoctor" type="radio" class="custom-control-input">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description custom-control-description-font">Rabu : 18.30-20.00 (Puskesmas Condong)</span>
-              </label>
-              <label class="custom-control custom-radio">
-                <input id="jadwalDoctor" name="jadwalDoctor" type="radio" class="custom-control-input">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description custom-control-description-font">Sabtu : 16.30-19.00 (Home klinik Kita)</span>
+                <span class="custom-control-description custom-control-description-font">{{ $jadwal->hari }} : {{ $jadwal->waktu_mulai }} - {{ $jadwal->waktu_akhir }} ({{ $jadwal->tempat_id }})</span>
               </label>
             </div>
+            @endforeach
 
           <!-- Sertifikat -->
           </div>

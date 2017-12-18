@@ -9,7 +9,7 @@
 <!-- Admin Spesialisasi -->
 <section class="container-fluid about">
   <div class="row-center">
-    <div class="col-sm-12 about-colom text-left">
+    <div class="col-sm-12 about-colom text-left clearfix">
       <h1>Doctor</h1>
 
       <table class="table table-hover table-striped table-bordered table-condensed">

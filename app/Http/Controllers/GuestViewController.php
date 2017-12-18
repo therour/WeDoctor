@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Spesialisasi;
+use App\Jadwal;
+use App\Doctor;
+use App\Tempat;
 
 class GuestViewController extends Controller
 {
@@ -65,15 +68,18 @@ class GuestViewController extends Controller
         return view('spesialisasi', ['dataSpesialisasi' => $dataSpesialisasi]);
     }
 
-    public function getViewDoctor(Spesialisasi $spesialisasi)
+    public function getViewDoctor(Spesialisasi $id)
     {
-        $doctors = $spesialisasi->doctors()->get();
+        $doctors = $id->doctors()->get();
         return view('doctor', ['doctors' => $doctors]);
     }
 
-    public function getViewDoctorSchedule()
+    public function getViewDoctorSchedule($id)
     {
-        return view('doctorschedule');
+        $doctors = Doctor::where('id','=',$id)->get();
+        $jadwals = Jadwal::where('doctor_id','=',$id)->get();
+
+        return view('doctorschedule', ['doctors' => $doctors, 'jadwals' => $jadwals]);
     }
 
     public function getViewRiwayat()

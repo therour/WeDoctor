@@ -21,7 +21,7 @@
         <h4 class="card-header spesialisasi-background-title">{{ $spesialisasi->nama_spesialisasi }}</h4>
         <div class="card-body spesialisasi-background">
           <p class="card-text">{{ $spesialisasi->deskripsi_spesialisasi }}</p>
-          <a href='/spesialisasi/{{$spesialisasi->id}}''><button type="button" class="btn btn-outline-info float-right">Find Doctor's</button></a>
+          <a href='/spesialisasi/doctor/{{$spesialisasi->id}}''><button type="button" class="btn btn-outline-info float-right">Find Doctor's</button></a>
         </div>
       </div>
     </div>

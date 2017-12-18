@@ -7,6 +7,7 @@ use DB;
 use Auth;
 use App\Spesialisasi;
 use App\Doctor;
+use App\Tempat;
 
 class AdminController extends Controller
 {
@@ -70,8 +71,6 @@ class AdminController extends Controller
     public function getViewEditDoctor($id)
     {
         $doctor = Doctor::where('id','=',$id)->first();
-
-
         return view('admindoctoredit')->with('dataDoctor',$doctor);
     }
 
@@ -90,7 +89,7 @@ class AdminController extends Controller
 
     public function getViewTambahDoctor()
     {
-        return view('admindoctortambah')->with('spesialisasi_nama',Spesialisasi::all());
+        return view('admindoctortambah')->with('spesialisasi_nama',Spesialisasi::all())->with('tempat',Tempat::all());
     }
 
     public function getViewUser()

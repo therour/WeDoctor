@@ -10,8 +10,8 @@ class Rating extends Model
         'rating_akhir', 'rating_user', 'user_id'
     ];
 
-    public function doctors()
-    {
-    	return $this->hasMany(Doctor::class);
-    }
+    // public function doctors()
+    // {
+    // 	return $this->hasMany(Doctor::class);
+    // }
 }
