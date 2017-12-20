@@ -40,27 +40,27 @@
           <tr>
             <td width=280px>Nama</td>
             <td width=15px>:</td>
-            <td></td>
+            <td>{{ $pasien->nama_pasien }}</td>
           </tr>
           <tr>
             <td>Tanggal Lahir</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->tanggal_lahir_pasien }}</td>
           </tr>
           <tr>
             <td>Jenis Kelamin</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->jenis_kelamin_pasien }}</td>
           </tr>
           <tr>
             <td>Alamat</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->alamat_pasien }}</td>
           </tr>
           <tr>
             <td>Riwayat Penyakit</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->riwayat_sakit }}</td>
           </tr>
         </table>
 
@@ -69,31 +69,31 @@
           <tr>
             <td width=280px>Nomor Urut</td>
             <td width=15px>:</td>
-            <td></td>
+            <td>{{ $pasien->no_urut }}</td>
           </tr>
           <tr>
             <td>Tanggal Berobat</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->tanggal_berobat }}</td>
           </tr>
           <tr>
             <td>Lokasi Berobat</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->jadwal->tempats->tempat }}</td>
           </tr>
           <tr>
             <td>Doctor Tujuan</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->jadwal->doctors->nama_doctor }}</td>
           </tr>
           <tr>
             <td>Waktu Masuk Ruangan</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->waktu_masuk }}</td>
           </tr><tr>
             <td>Waktu Aman Sudah Harus di Lokasi</td>
             <td>:</td>
-            <td></td>
+            <td>{{ $pasien->waktu_aman }}</td>
           </tr>
         </table>
       </div>

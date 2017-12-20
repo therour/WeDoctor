@@ -11,13 +11,26 @@
     <div class="col-sm-12 find-jadwal-colom">
       <h1 class="text-center">Find Jadwal</h1>
       <p>Cari jadwal doktor di hari yang anda inginkan</p>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="date" placeholder="Search" aria-label="Search">
-        <button type="submit" class="btn btn-light my-2 my-sm-0">Search</button>
+      <form action="" class="form-inline" method="GET">
+        <select name="hari" class="form-control">
+          <option value="NULL">-- Silahkan Pilih Hari --</option>
+          <option value="Senin">Senin</option>
+          <option value="Selasa">Selasa</option>
+          <option value="Rabu">Rabu</option>
+          <option value="Kamis">Kamis</option>
+          <option value="Jumat">Jumat</option>
+          <option value="Sabtu">Sabtu</option>
+        </select>
+        <button type="submit" class="btn btn-light my-2 my-sm-0" style="margin-left: 10px;">Search</button>
       </form>
     </div>
   </div>
 
+  @foreach ($jadwals as $jadwal)
+    {{ $jadwal->doctors->nama_doctor }} : {{ $jadwal->waktu_mulai }} - {{ $jadwal->waktu_akhir }}
+    <br>
+  @endforeach
+  
   <!-- Hasil pencarian -->
   <!-- <div class="row find-jadwal justify-content-lg-center">
     <div class="col-sm-3 doctor-colom">
@@ -63,5 +76,6 @@
       </div>
     </div> 
   </div>-->
+
 </section>
 @endsection

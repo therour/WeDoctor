@@ -14,11 +14,10 @@ class CreateRatingsTable extends Migration
     public function up()
     {
         Schema::create('ratings', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('rating_akhir');
-            $table->integer('rating_user');
+            $table->integer('doctor_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
-            $table->timestamps();
+            $table->integer('rating_user');
+            $table->primary(['doctor_id', 'user_id']);
         });
     }
 

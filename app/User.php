@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Pasien;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function pasiens()
+    {   
+        return $this->hasMany(Pasien::class);
+    }
+
+    public function rating()
+    {
+        // Pivot menunjukkan ada data kolom namanya rating_user di dalam tabel ratings
+        return $this->belongsToMany(Doctor::class, 'ratings')->withPivot(['rating_user']);
+    }
 }

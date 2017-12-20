@@ -60,5 +60,35 @@ class TempatSeeder extends Seeder
             'tempat' => 'Klinik Nirmala',
             'alamat' => 'Jalan Ring Road Selatan'
         ]);
+
+        DB::table('tempats')->insert([
+            'tempat' => 'Klinik Sahati',
+            'alamat' => 'Jalan Ring Road Utara'
+        ]);
+
+        DB::table('tempats')->insert([
+            'tempat' => 'Rumah Sakit PKU Kota Jogja',
+            'alamat' => 'Jalan Bhayangkara'
+        ]);
+
+        DB::table('tempats')->insert([
+            'tempat' => 'Rumah Sakit PKU Gamping',
+            'alamat' => 'Jalan Wates'
+        ]);
+
+        DB::table('tempats')->insert([
+            'tempat' => 'Rumah Sakit PKU Kota Gede',
+            'alamat' => 'Jalan Kota Gede'
+        ]);
+
+        DB::table('tempats')->insert([
+            'tempat' => 'Klinik Sehat',
+            'alamat' => 'Jalan Anggajaya'
+        ]);
+
+        DB::table('tempats')->insert([
+            'tempat' => 'Klinik Keluarga',
+            'alamat' => 'Jalan Sosrodipuran'
+        ]);
     }
 }

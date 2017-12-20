@@ -220,5 +220,187 @@ class DoctorSeeder extends Seeder
             'pengalaman_doctor' => 'Dokter Tetap RS Bethesda',
             'spesialisasi_id' => '5'
         ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Fulan Attaki Sp.KK',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Jogja Internasional Hospital',
+            'spesialisasi_id' => '6'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Al Fatih Sp.KK',
+            'alamat_doctor' => 'Bantul',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Jogja Internasional Hospital',
+            'spesialisasi_id' => '6'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Al Ghazali Sp.KK',
+            'alamat_doctor' => 'Jl. Godean',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Panti Rapih',
+            'spesialisasi_id' => '6'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Ahmad Sp.KK',
+            'alamat_doctor' => 'Kota Baru  ',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '6'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Latif Sp.KK',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Jogja Internasional Hospital',
+            'spesialisasi_id' => '6'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Dirga Sp.KK',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Bethesda',
+            'spesialisasi_id' => '6'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Ali Sp.M',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. PKU Yogyakarta',
+            'spesialisasi_id' => '7'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Umar Sp.M',
+            'alamat_doctor' => 'Kota Baru',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '7'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Utsman Sp.M',
+            'alamat_doctor' => 'Sleman',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '7'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Steven Sp.M',
+            'alamat_doctor' => 'Jl. A M Sangaji',
+            'pengalaman_doctor' => 'Dokter Tetap RS. PKU Yogyakarta',
+            'spesialisasi_id' => '7'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Kara Sp.M',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Panti Rapih',
+            'spesialisasi_id' => '7'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Abdul Sp.PD',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Panti Rapih',
+            'spesialisasi_id' => '8'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Susanti Sp.PD',
+            'alamat_doctor' => 'Jl. Damai No. 27',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Bethesda',
+            'spesialisasi_id' => '8'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Sinta Sp.PD',
+            'alamat_doctor' => 'Jetis',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '8'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Legowo Sp.PD',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Panti Rapih',
+            'spesialisasi_id' => '8'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Said Sp.PD',
+            'alamat_doctor' => 'Pogung',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '8'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr.Hidayat Sp.S',
+            'alamat_doctor' => 'Monjali',
+            'pengalaman_doctor' => 'Dokter Tetap RS. PKU Yogyakarta',
+            'spesialisasi_id' => '9'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Taufik Sp.S',
+            'alamat_doctor' => 'Jl. Anggajaya',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '9'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Isnaini Sp.S',
+            'alamat_doctor' => 'Bantul',
+            'pengalaman_doctor' => 'Dokter Tetap RS. PKU Yogyakarta',
+            'spesialisasi_id' => '9'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. David Sp.S',
+            'alamat_doctor' => 'Gejayan',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '9'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Daud Sp.S',
+            'alamat_doctor' => 'Jl. Kaliurang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '9'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Shafin Sp.THT-KL',
+            'alamat_doctor' => 'Kota Baru',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Panti Rapih',
+            'spesialisasi_id' => '10'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Shafar Sp.THT-KL',
+            'alamat_doctor' => 'Kota Baru',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '10'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Aasiyah Sp.THT-KL',
+            'alamat_doctor' => 'Jl. Ring Road Utara',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '10'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Shafaq Sp.THT-KL',
+            'alamat_doctor' => 'Jl. Magelang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. JIH',
+            'spesialisasi_id' => '10'
+        ]);
+
+        DB::table('doctors')->insert([
+            'nama_doctor' => 'Dr. Aaqib Sp.THT-KL',
+            'alamat_doctor' => 'Jl. Magelang',
+            'pengalaman_doctor' => 'Dokter Tetap RS. Panti Rapih',
+            'spesialisasi_id' => '10'
+        ]);
     }
 }

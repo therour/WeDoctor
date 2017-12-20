@@ -11,27 +11,24 @@
     <div class="col-sm-12 find-rating-colom">
       <h1 class="text-center">Find Rating</h1>
       <p>Berikan rating anda kepada doktor untuk peningkatan kualitas dokter.</p>
-      <select class="form-control rating">
-        <option selected>Pilih dokter yang akan anda berikan rating</option>
-        <option value="">Doctor A</option>
-        <option value="">Doctor B</option>
-        <option value="">Doctor C</option>
-        <option value="">Doctor D</option>
-        <option value="">Doctor E</option>
-        <option value="">Doctor F</option>
-        <option value="">Doctor G</option>
-        <option value="">Doctor H</option>
-        <option value="">Doctor I</option>
-      </select>
-      <select class="form-control rating">
-        <option selected>Pilih rating untuk dokter yang anda pilih</option>
-        <option value="">Bintang 1</option>
-        <option value="">Bintang 2</option>
-        <option value="">Bintang 3</option>
-        <option value="">Bintang 4</option>
-        <option value="">Bintang 5</option>
-      </select>
-      <button type="button" class="btn btn-light float-right">Submit</button>
+      <form action="{{ url('/submitrating') }}" method="POST">
+        {{ csrf_field() }}
+        <select name="doctor_id" class="form-control rating">
+          <option selected>Pilih dokter yang akan anda berikan rating</option>
+          @foreach ($doctors as $doctor)
+            <option value="{{ $doctor->id }}">{{ $doctor->nama_doctor }}</option>
+          @endforeach
+        </select>
+        <select name="rating_user" class="form-control rating">
+          <option selected>Pilih rating untuk dokter yang anda pilih</option>
+          <option value="1">Bintang 1</option>
+          <option value="2">Bintang 2</option>
+          <option value="3">Bintang 3</option>
+          <option value="4">Bintang 4</option>
+          <option value="5">Bintang 5</option>
+        </select>
+        <button type="submit" class="btn btn-light float-right">Submit</button>
+      </form>
     </div>
   </div>
 </section>

@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 // Routing untuk GUEST
     Route::get('/', 'GuestViewController@getViewHome');
     Route::get('/about', 'GuestViewController@getViewAbout');
@@ -19,7 +8,11 @@
     Route::get('/signup', 'GuestViewController@getViewSignUp');
     Route::get('/findmaps', 'GuestViewController@getViewFindMaps');
     Route::get('/findjadwal', 'GuestViewController@getViewFindJadwal');
+
+    // Routing untuk rating
     Route::get('/findrating', 'GuestViewController@getViewFindRating');
+    Route::post('/submitrating', 'GuestViewController@submitrating');
+
     Route::get('/cekakun', 'GuestViewController@getViewCekAkun');
     Route::get('/spesialisasi', 'GuestViewController@getViewSpesialisasi');
     Route::get('/spesialisasi/doctor/{id}', 'GuestViewController@getViewDoctor');
@@ -34,8 +27,8 @@
     Route::get('/home', 'HomeController@getView')->name('home');
     Route::get('/admin', 'AdminController@getViewHome')->name('admin');
 
-    Route::get('/bookingstep1', 'BookingController@getViewStep1');
-    Route::get('/bookingstep2', 'BookingController@getViewStep2');
+    Route::post('/bookingstep1', 'BookingController@getViewStep1');
+    Route::post('/bookingstep2', 'BookingController@getViewStep2');
     Route::get('/bookingstep3', 'BookingController@getViewStep3');
 
 // Routing ADMIN SPESIALISASI
