@@ -52,7 +52,7 @@
               <label class="label-font-size" for="jenis_kelamin_pasien">Jenis Kelamin</label>
               <div class="input-group">
                 <span class="input-group-addon input-size">
-                  <input type="radio" aria-label="Radio button for following text input" name="jenis_kelamin_pasien" value="Laki-laki">
+                  <input type="radio" aria-label="Radio button for following text input" name="jenis_kelamin_pasien" value="Laki-laki" checked>
                 </span>
                 <input type="text" class="form-control input-size" aria-label="Text input with radio button" value="Laki-laki" readonly>
               </div>

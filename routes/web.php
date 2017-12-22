@@ -48,10 +48,8 @@
     Route::post('/admin/doctor/tambah', 'AdminController@tambahDoctor');
     Route::delete('/admin/doctor/delete/{id}', 'AdminController@deleteDoctor');
 
-// Routing ADMIN DOCTOR
+// Routing ADMIN USER
     Route::get('/admin/user', 'AdminController@getViewUser');
     Route::delete('/admin/user/delete/{id}', 'AdminController@deleteUser');
 
-// Routing ADMIN USER
-    Route::get('/admin/user', 'AdminController@getViewUser');
 
