@@ -18,8 +18,9 @@ class CreateDoctorsTable extends Migration
             $table->string('nama_doctor');
             $table->string('alamat_doctor');
             $table->string('pengalaman_doctor');
-            $table->float('rating')->nullable();
+            $table->float('rating')->default(0);
             $table->integer('spesialisasi_id')->unsigned()->index();
+            // $table->foreign('spesialisasi_id')->references('id')->on('spesialisasis')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

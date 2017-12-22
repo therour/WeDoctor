@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use Auth;
+use Auth; 
 use App\Spesialisasi;
 use App\Doctor;
 use App\Tempat;
+use App\User;
+use App\Jadwal;
 
 class AdminController extends Controller
 {
@@ -94,7 +96,18 @@ class AdminController extends Controller
 
     public function getViewUser()
     {
-        return view('adminuser');
+        $users = User::where('id','>','1')->get();
+
+        return view('adminuser')->with('users',$users)->with('no',1);
+    }
+
+    public function deleteUser($id)
+    {
+        $user = User::find($id);
+
+        $user->delete();
+
+        return redirect('/admin/user');
     }
 
     public function tambahSpesialisasi(Request $request)
@@ -112,21 +125,31 @@ class AdminController extends Controller
     public function deleteSpesialisasi($id)
     {
         $spesialisasi = Spesialisasi::find($id);
+
         $spesialisasi->delete();
 
         return redirect('/admin/spesialisasi');
     }
 
     public function tambahDoctor(Request $request)
-    {
-        $doctor = new Doctor;
+    {            
+        $doctor = Doctor::create([
+            'nama_doctor' => $request->nama_doctor,
+            'alamat_doctor' => $request->alamat_doctor,
+            'pengalaman_doctor' => $request->pengalaman_doctor,
+            'spesialisasi_id' => $request->spesialisasi_id
+        ]);
 
-            $doctor->nama_doctor = $request->nama_doctor;
-            $doctor->alamat_doctor = $request->alamat_doctor;
-            $doctor->pengalaman_doctor = $request->pengalaman_doctor;
-            $doctor->spesialisasi_id = $request->spesialisasi_doctor;
-
-        $doctor->save();
+        for($i=0 ; $i<3; $i++)
+        { 
+            $jadwal = Jadwal::create([
+                'doctor_id' => $doctor->id,
+                'hari' => $request->hari[$i],
+                'waktu_mulai' => $request->waktu_mulai[$i],
+                'waktu_akhir' => $request->waktu_akhir[$i],
+                'tempat_id' => $request->tempat[$i]
+            ]);
+        }
 
         return redirect('/admin/doctor');
     }

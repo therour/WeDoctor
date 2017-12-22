@@ -25,7 +25,9 @@ class CreatePasiensTable extends Migration
             $table->time('waktu_masuk');
             $table->time('waktu_aman');
             $table->integer('user_id')->unsigned()->index();
+            // $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('jadwal_id')->unsigned()->index();
+            // $table->foreign('jadwal_id')->references('id')->on('jadwals')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

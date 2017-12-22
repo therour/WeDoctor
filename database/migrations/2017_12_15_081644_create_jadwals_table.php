@@ -18,7 +18,9 @@ class CreateJadwalsTable extends Migration
             $table->time('waktu_mulai');
             $table->time('waktu_akhir');
             $table->integer('tempat_id')->unsigned()->index();
+            // $table->foreign('tempat_id')->references('id')->on('tempats')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('doctor_id')->unsigned()->index();
+            // $table->foreign('doctor_id')->references('id')->on('doctors')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

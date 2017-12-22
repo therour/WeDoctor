@@ -9,16 +9,10 @@
     Route::get('/findmaps', 'GuestViewController@getViewFindMaps');
     Route::get('/findjadwal', 'GuestViewController@getViewFindJadwal');
 
-    // Routing untuk rating
-    Route::get('/findrating', 'GuestViewController@getViewFindRating');
-    Route::post('/submitrating', 'GuestViewController@submitrating');
-
     Route::get('/cekakun', 'GuestViewController@getViewCekAkun');
     Route::get('/spesialisasi', 'GuestViewController@getViewSpesialisasi');
     Route::get('/spesialisasi/doctor/{id}', 'GuestViewController@getViewDoctor');
     Route::get('/spesialisasi/doctor/doctorschedule/{id}', 'GuestViewController@getViewDoctorSchedule');
-    Route::get('/riwayat', 'GuestViewController@getViewRiwayat');
-    Route::get('/profile', 'GuestViewController@getViewProfile');
 
 // Autentikasi untuk login dan register otomatis
     Auth::routes();
@@ -30,6 +24,13 @@
     Route::post('/bookingstep1', 'BookingController@getViewStep1');
     Route::post('/bookingstep2', 'BookingController@getViewStep2');
     Route::get('/bookingstep3', 'BookingController@getViewStep3');
+
+    Route::get('/findrating', 'BookingController@getViewFindRating');
+    Route::post('/submitrating', 'BookingController@submitrating');
+
+    Route::get('/riwayat', 'BookingController@getViewRiwayat');
+    Route::get('/profile/{id}', 'BookingController@getViewProfile');
+    Route::put('/profile/{id}', 'BookingController@editProfile');
 
 // Routing ADMIN SPESIALISASI
     Route::get('/admin/spesialisasi', 'AdminController@getViewSpesialisasi');
@@ -46,6 +47,10 @@
     Route::get('/admin/doctor/tambah', 'AdminController@getViewTambahDoctor');
     Route::post('/admin/doctor/tambah', 'AdminController@tambahDoctor');
     Route::delete('/admin/doctor/delete/{id}', 'AdminController@deleteDoctor');
+
+// Routing ADMIN DOCTOR
+    Route::get('/admin/user', 'AdminController@getViewUser');
+    Route::delete('/admin/user/delete/{id}', 'AdminController@deleteUser');
 
 // Routing ADMIN USER
     Route::get('/admin/user', 'AdminController@getViewUser');

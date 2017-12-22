@@ -13,7 +13,7 @@
       <div class="col-sm-12 about-colom text-left clearfix">
         <h1>Edit Spesialisasi</h1>
 
-        <form action="/admin/spesialisasi/edit/{{ $dataSpesialisasi->id }}" method="POST">
+        <form id="edit-form" action="/admin/spesialisasi/edit/{{ $dataSpesialisasi->id }}" method="POST">
           {{ csrf_field() }}
             <!-- Nama Spesialisasi -->
             <div class="form-group row">
@@ -30,7 +30,15 @@
               </div>
             </div>
 
-          <button type="submit" class="btn btn-outline-info float-right">Edit</button>
+          <button type="submit" class="btn btn-outline-info float-right"
+           onclick="
+            var result = confirm('Apakah anda yakin ingin mengubah?');
+            if(result)
+            {
+              event.preventDefault();
+              document.getElementById('edit-form').submit();
+            }
+          ">Edit</button>
 
           <input type="hidden" name="_method" value="PUT">
         </form>

@@ -17,7 +17,7 @@
 
         <div class="form-group form-margin-atas">
           <label for="username">Username</label>
-          <input name="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" id="username" placeholder="Nama User Anda">
+          <input name="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" id="username" placeholder="Nama User Anda" autofocus="">
 
           @if ($errors->has('username'))
             <div class="invalid-feedback">

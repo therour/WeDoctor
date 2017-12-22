@@ -15,7 +15,9 @@ class CreateRatingsTable extends Migration
     {
         Schema::create('ratings', function (Blueprint $table) {
             $table->integer('doctor_id')->unsigned()->index();
+            // $table->foreign('doctor_id')->references('id')->on('doctors')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();
+            // $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('rating_user');
             $table->primary(['doctor_id', 'user_id']);
         });

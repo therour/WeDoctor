@@ -34,7 +34,7 @@
             <tr>
               <td>Rating</td>
               <td>: </td>
-              <td>Bintang 5</td>
+              <td>{{ $doctor->rating }}</td>
             </tr>
             <tr>
               <td>Alamat</td>

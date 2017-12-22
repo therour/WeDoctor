@@ -35,7 +35,7 @@
                 <tr>
                   <td>Rating</td>
                   <td>: </td>
-                  <td>Bintang 5</td>
+                  <td>{{ $doctor->rating }}</td>
                 </tr>
                 <tr>
                   <td>Alamat</td>
@@ -69,7 +69,12 @@
             <div class="pemanis clearfix">
               <!-- untuk clearfix -->
             </div>
-            <button type="submit" class="btn btn-outline-info float-right">Booking</button></a>
+
+            @guest
+              <button type="button" class="btn btn-outline-info float-right">Mohon login dulu untuk dapat melakukan booking doctor !!</button></a>
+            @else
+              <button type="submit" class="btn btn-outline-info float-right">Booking</button></a>
+            @endguest
           </div>
         </div>
       </div>

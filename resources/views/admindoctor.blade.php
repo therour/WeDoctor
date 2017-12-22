@@ -38,10 +38,11 @@
 
             </td>
             <td>
-              <form action="/admin/doctor/delete/{{ $doctor->id }}" method="POST">
-                {{csrf_field()}}
-                <button type="submit" class="btn btn-outline-info float-right clearfix""><img src="{{asset('/img/icon/delete.png')}}" alt="Error load image"></button>
 
+              <form action="/admin/doctor/delete/{{ $doctor->id }}" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus {{ $doctor->nama_doctor }} dari database?');">
+                {{csrf_field()}}
+                <!-- {{method_field('DELETE')}} -->
+                <button type="submit" class="btn btn-outline-info float-right clearfix"><img src="{{asset('/img/icon/delete.png')}}" alt="Error load image"></button>
                 <input type="hidden" name="_method" value="DELETE">
               </form>
             </td>

@@ -54,54 +54,6 @@ class GuestViewController extends Controller
         return view('findjadwal', ['jadwals' => $jadwals]); 
     }
 
-    public function getViewFindRating(Request $request)
-    {
-        // $pasiens = $request->user()->pasiens()->get(); <<<< kalo mau sesuai dokter yang udah pernah user singgahin
-        $doctors = Doctor::all();
-
-        return view('findrating', ['doctors' => $doctors]);
-    }
-
-    public function submitrating(Request $request)
-    {
-        // Untuk melihat ada dokter_id dan user_id yang sama ga di database
-        $ada = count(DB::table('ratings')->where('doctor_id', $request->doctor_id)->where('user_id', $request->user()->id)->get()) > 0;
-
-        // Jika ada
-        if ($ada) 
-        {
-            // data yang di database di update dengan data inputan yang baru
-            $request->user()->rating()->updateExistingPivot($request->doctor_id, 
-            [
-                // kolom rating_user di isi dengan inputan yang baru
-                'rating_user' => $request->rating_user
-            ]);
-        } 
-        else 
-        {
-            // jika tidak ada maka membuat baris isian baru
-            $request->user()->rating()->attach($request->doctor_id, ['rating_user' => $request->rating_user]);
-        }
-
-        $rating_baru = 0; 
-        $jumlah_penilai = DB::table('ratings')->where('doctor_id', $request->doctor_id)->get();
-        foreach ($jumlah_penilai as $nilai) 
-        {
-            // penjumlahan semua penilaian terhadap doctor_id yang sama
-            $rating_baru += $nilai->rating_user;
-        }
-        // (float) menandakan bahwa rating_baru bertipe float dari yang awalnya integer
-        $rating_baru = (float) $rating_baru / count($jumlah_penilai);
-
-        // mencari doctor_id di database Doctor yang sesuai dengan requestnya
-        $doctor = Doctor::find($request->doctor_id);
-        // kolom rating di tabel doctor di assignmen dengan rating_baru
-        $doctor->rating = $rating_baru;
-        $doctor->save();
-
-        return redirect()->back();
-    }
-
     public function getViewCekAkun()
     {
         return view('cekakun');
@@ -126,15 +78,5 @@ class GuestViewController extends Controller
         $jadwals = Jadwal::where('doctor_id','=',$id)->get();
 
         return view('doctorschedule', ['doctor' => $doctors, 'jadwals' => $jadwals]);
-    }
-
-    public function getViewRiwayat()
-    {
-        return view('riwayat');
-    }
-
-    public function getViewProfile()
-    {
-        return view('profile');
     }
 }

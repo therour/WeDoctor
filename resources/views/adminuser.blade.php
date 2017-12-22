@@ -11,32 +11,34 @@
   <div class="container-fluid">
     <div class="row-center">
       <div class="col-sm-12 about-colom text-left clearfix">
-        <h1>Spesialisasi</h1>
+        <h1>User</h1>
 
         <table class="table table-hover table-striped table-bordered table-condensed">
           <thead>
             <tr>
               <th width="50px">No.</th>
-              <th width="350px">Nama Spesialisasi</th>
-              <th>Deskripsi Spesialisasi</th>
-              <th width="45px"></th>
+              <th>Nama User</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Tanggal Lahir</th>
+              <th>Jenis Kelamin</th>
+              <th>NIK</th>
               <th width="45px"></th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($dataSpesialisasi as $spesialisasi)
+            @foreach ($users as $user)
             <tr>
               <td>{{ $no++ }}</td>
-              <td>{{ $spesialisasi->nama_spesialisasi }}</td>
-              <td>{{ $spesialisasi->deskripsi_spesialisasi }}</td>
+              <td>{{ $user->nama }}</td>
+              <td>{{ $user->username }}</td>
+              <td>{{ $user->email }}</td>
+              <td>{{ $user->tanggal_lahir }}</td>
+              <td>{{ $user->jenis_kelamin }}</td>
+              <td>{{ $user->nik }}</td>
               <td>
 
-                <a href="/admin/spesialisasi/edit/{{ $spesialisasi->id }}"><button type="button" class="btn btn-outline-info float-right clearfix"><img src="{{asset('/img/icon/edit.png')}}" alt="Error load image"></button></a>
-
-              </td>
-              <td>
-
-                <form id="delete-form" action="/admin/spesialisasi/delete/{{ $spesialisasi->id }}" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus {{ $spesialisasi->nama_spesialisasi }} dari database?');">
+                <form id="delete-form" action="/admin/user/delete/{{ $user->id }}" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus {{ $user->nama }} dari database?');">
                   {{csrf_field()}}
                   <button type="submit" class="btn btn-outline-info float-right clearfix"><img src="{{asset('/img/icon/delete.png')}}" alt="Error load image"></button>
                   <input type="hidden" name="_method" value="DELETE">
@@ -44,9 +46,6 @@
               </td>
             </tr>
             @endforeach
-            <tr>
-              <a href='/admin/spesialisasi/tambah'><button type="button" class="btn btn-outline-info float-right clearfix">Tambah</button></a>
-            </tr>
           </tbody>
         </table>
       </div>

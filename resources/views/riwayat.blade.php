@@ -19,17 +19,17 @@
               <tr>
                 <th width="50px">No.</th>
                 <th>Nama Pasien</th>
-                <th>Nama Penyakit</th>
                 <th>Dokter</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mail</td>
-                <td>Panu</td>
-                <td>Sulaiman</td>
-              </tr>
+              @foreach($riwayats as $riwayat)
+                <tr>
+                  <td>{{ $no++ }}</td>
+                  <td>{{ $riwayat->nama_pasien }}</td>
+                  <td>{{ $riwayat->jadwal->doctors->nama_doctor }}</td>
+                </tr>
+              @endforeach
             </tbody>
           </table>
         </nav>

@@ -1,6 +1,7 @@
 @extends('template.utama')
 
 @section('css')
+<link rel="stylesheet" type="text/css" href="{{asset('/css/styleDoctor.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('/css/styleFindJadwal.css')}}">
 @endsection
 
@@ -25,57 +26,62 @@
       </form>
     </div>
   </div>
+</section>
 
-  @foreach ($jadwals as $jadwal)
-    {{ $jadwal->doctors->nama_doctor }} : {{ $jadwal->waktu_mulai }} - {{ $jadwal->waktu_akhir }}
-    <br>
-  @endforeach
-  
+
   <!-- Hasil pencarian -->
-  <!-- <div class="row find-jadwal justify-content-lg-center">
-    <div class="col-sm-3 doctor-colom">
+<section class="container-fluid doctor" style="padding: 30px;">
+  <div class="row">
+  @foreach ($jadwals as $jadwal)
+    <div class="col-sm-6 col-md-4">
       <div class="card border-card">
         <div class="background-profile">
-
+          <!-- Import background -->
           <div class="fotoprofile">
-            <img class="rounded-circle" src="../img/booking/doctor/doctor.png" alt="Error load image">
+            <img class="rounded-circle" src="{{asset('/img/booking/doctor/doctor.png')}}" alt="Error load image">
           </div>
         </div>
 
         <div class="card-body spesialisasi-background">
-          <h4 class="card-title">Nama Doctor</h4>
+          <h4 class="card-title">{{ $jadwal->doctors->nama_doctor }}</h4>
           <table>
             <tr>
               <td width="100px">Spesialisasi</td>
               <td width="20px">: </td>
-              <td>abcdefghij</td>
+              <td>{{ $jadwal->doctors->spesialisasi->nama_spesialisasi }}</td>
             </tr>
             <tr>
               <td>Rating</td>
               <td>: </td>
-              <td>Bintang 5</td>
+              <td>{{ $jadwal->doctors->rating }}/5</td>
             </tr>
             <tr>
               <td>Alamat</td>
               <td>: </td>
-              <td>abcdefghij</td>
+              <td>{{ $jadwal->doctors->alamat_doctor }}</td>
             </tr>
             <tr>
               <td>Pengalaman</td>
               <td>: </td>
-              <td>abcdefghij</td>
+              <td>{{ $jadwal->doctors->pengalaman_doctor }}</td>
             </tr>
             <tr>
-              <td valign="top">Sertifikat</td>
-              <td valign="top">: </td>
-              <td><img class="img-thumbnail sertifikat" src="../img/booking/doctor/sertifikat.jpg" alt=""></td>
+              <td>Hari</td>
+              <td>: </td>
+              <td>{{ $jadwal->hari }}</td>
+            </tr>
+            <tr>
+              <td>Waktu</td>
+              <td>: </td>
+              <td>{{ $jadwal->waktu_mulai }} - {{ $jadwal->waktu_akhir }}</td>
             </tr>
           </table>
-          <button type="button" class="btn btn-outline-info float-right">Booking</button>
+          <a href='/spesialisasi/doctor/doctorschedule/{{$jadwal->doctors->id}}'><button type="button" class="btn btn-outline-info float-right">View Profil Doctor and Schedule</button></a>
         </div>
       </div>
-    </div> 
-  </div>-->
-
+    </div>
+  @endforeach
+  </div>
 </section>
+
 @endsection
