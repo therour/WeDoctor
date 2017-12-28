@@ -3,16 +3,15 @@
 	.footer-copyright
 	{
 	    width: 100%;
-	    border: 3px solid white;
 	    box-sizing: border-box;
 	    background: rgba(230,42,61,0.5);
 	}
 
 	.footer-copyright h3
 	{
-	    font-size: 16px;
+	    font-size: 13px;
 	    font-style: italic;
-	    line-height: 50px;
+	    line-height:25px;
 	    text-align: center;
 	    margin: 0;
 	    font-weight: bold;
@@ -30,16 +29,15 @@
 	.footer-copyright
 	{
 	    width: 100%;
-	    border: 3px solid white;
 	    box-sizing: border-box;
 	    background: rgba(230,42,61,0.5);
 	}
 
 	.footer-copyright h3
 	{
-	    font-size: 14px;
+	    font-size: 12px;
 	    font-style: italic;
-	    line-height: 40px;
+	    line-height: 25px;
 	    text-align: center;
 	    margin: 0;
 	    font-weight: bold;
@@ -57,14 +55,13 @@
 	.footer-copyright
 	{
 	    width: 100%;
-	    border: 3px solid white;
 	    box-sizing: border-box;
 	    background: rgba(230,42,61,0.5);
 	}
 
 	.footer-copyright h3
 	{
-	    font-size: 12px;
+	    font-size: 11px;
 	    font-style: italic;
 	    line-height: 25px;
 	    text-align: center;
@@ -84,16 +81,15 @@
 	 .footer-copyright
 	{
 	    width: 100%;
-	    border: 3px solid white;
 	    box-sizing: border-box;
 	    background: rgba(230,42,61,0.5);
 	}
 
 	.footer-copyright h3
 	{
-	    font-size: 12px;
+	    font-size: 10px;
 	    font-style: italic;
-	    line-height: 25px;
+	    line-height: 20px;
 	    text-align: center;
 	    margin: 0;
 	    font-weight: bold;
@@ -106,7 +102,28 @@
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.footer-copyright
+	{
+	    width: 100%;
+	    box-sizing: border-box;
+	    background: rgba(230,42,61,0.5);
+	}
 
-}*/
+	.footer-copyright h3
+	{
+	    font-size: 10px;
+	    font-style: italic;
+	    line-height: 20px;
+	    text-align: center;
+	    margin: 0;
+	    font-weight: bold;
+	}
+
+	.copyright-footer
+	{
+	    padding: 0;
+	    margin: 0;
+	}
+}

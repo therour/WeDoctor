@@ -18,10 +18,9 @@
             <th width="50px">No.</th>
             <th width="350px">Nama Doctor</th>
             <th>Alamat Doctor</th>
-            <th>Pengalaman Doctor</th>
+            <th>Status Doctor</th>
             <th>Spesialisasi Doctor</th>
-            <th width="45px"></th>
-            <th width="45px"></th>
+            <th colspan="2" width="90px" align="center"><a href='/admin/doctor/tambah'><button type="button" class="btn btn-outline-info clearfix" style="width:120px;">Tambah</button></a></th>
           </tr>
         </thead>
         <tbody>
@@ -30,7 +29,7 @@
             <td>{{ $no++ }}</td>
             <td>{{ $doctor->nama_doctor }}</td>
             <td>{{ $doctor->alamat_doctor }}</td>
-            <td>{{ $doctor->pengalaman_doctor }}</td>
+            <td>{{ $doctor->status }}</td>
             <td>{{ $doctor->spesialisasi->nama_spesialisasi }}</td>
             <td>
 
@@ -38,22 +37,45 @@
 
             </td>
             <td>
-
-              <form action="/admin/doctor/delete/{{ $doctor->id }}" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus {{ $doctor->nama_doctor }} dari database?');">
+              <form class="form-delete" action="/admin/doctor/delete/{{ $doctor->id }}" method="POST">
                 {{csrf_field()}}
-                <!-- {{method_field('DELETE')}} -->
                 <button type="submit" class="btn btn-outline-info float-right clearfix"><img src="{{asset('/img/icon/delete.png')}}" alt="Error load image"></button>
                 <input type="hidden" name="_method" value="DELETE">
               </form>
             </td>
           </tr>
           @endforeach
-          <tr>
-            <a href='/admin/doctor/tambah'><button type="button" class="btn btn-outline-info float-right clearfix">Tambah</button></a>
-          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
+@endsection
+
+@section('jsadmin')
+<script>
+  $('.form-delete').submit(function (e)
+  {
+    var form = this;
+    e.preventDefault();
+    swal
+    ({
+      title: 'Apa anda yakin?',
+      text: "Ini akan menghapus secara permanent",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yakin',
+      cancelButtonText: 'Tidak'
+    }, 
+    function (result) 
+    {
+      if (result) 
+      {
+        form.submit();
+      }
+    });
+  });
+</script>
 @endsection

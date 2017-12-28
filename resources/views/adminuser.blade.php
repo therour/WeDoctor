@@ -29,18 +29,18 @@
           <tbody>
             @foreach ($users as $user)
             <tr>
-              <td>{{ $no++ }}</td>
-              <td>{{ $user->nama }}</td>
-              <td>{{ $user->username }}</td>
-              <td>{{ $user->email }}</td>
-              <td>{{ $user->tanggal_lahir }}</td>
-              <td>{{ $user->jenis_kelamin }}</td>
-              <td>{{ $user->nik }}</td>
-              <td>
+              <td valign="middle">{{ $no++ }}</td>
+              <td valign="middle">{{ $user->nama }}</td>
+              <td valign="middle">{{ $user->username }}</td>
+              <td valign="middle">{{ $user->email }}</td>
+              <td valign="middle">{{ $user->tanggal_lahir }}</td>
+              <td valign="middle">{{ $user->jenis_kelamin }}</td>
+              <td valign="middle">{{ $user->nik }}</td>
+              <td valign="middle">
 
-                <form id="delete-form" action="/admin/user/delete/{{ $user->id }}" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus {{ $user->nama }} dari database?');">
+                <form class="form-delete" action="/admin/user/delete/{{ $user->id }}" method="POST">
                   {{csrf_field()}}
-                  <button type="submit" class="btn btn-outline-info float-right clearfix"><img src="{{asset('/img/icon/delete.png')}}" alt="Error load image"></button>
+                  <button type="submit" class="btn btn-outline-info clearfix" style="margin-top: 0;"><img src="{{asset('/img/icon/delete.png')}}" alt="Error load image"></button>
                   <input type="hidden" name="_method" value="DELETE">
                 </form>
               </td>
@@ -52,4 +52,32 @@
     </div>
   </div>
 </section>
+@endsection
+
+@section('jsadmin')
+<script>
+  $('.form-delete').submit(function (e)
+  {
+    var form = this;
+    e.preventDefault();
+    swal
+    ({
+      title: 'Apa anda yakin?',
+      text: "Ini akan menghapus secara permanent",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yakin',
+      cancelButtonText: 'Tidak'
+    }, 
+    function (result) 
+    {
+      if (result) 
+      {
+        form.submit();
+      }
+    });
+  });
+</script>
 @endsection

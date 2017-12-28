@@ -8,7 +8,6 @@
 <!-- How to Booking -->
     <section class="container-fluid howtobooking">
       <div class="row howtobooking-row">
-        <h1>How To Booking ?</h1>
         <div class="col-sm-12 text-center howtobooking-colom">
           <img src="{{asset('/img/howtobooking/howtobooking.png')}}" alt="Error Load Image" width="600px">
         </div>

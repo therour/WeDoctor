@@ -1,3 +1,8 @@
+.btn
+{
+	border: 1px solid black;
+}
+
 @media (min-width: 1200px) 
 { 
 	.signin
@@ -256,7 +261,70 @@
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.signin
+	{
+		width: 100%;
+		border: 5px solid white;
+		min-height: 100px;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+	}
 
-}*/
+	.signin-row
+	{
+		min-height: 35	0px;
+	}
+
+	.signin-colom
+	{
+		margin: auto;
+		width: 380px;
+		padding: 0;
+	}
+
+	.signin-colom h1
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-size: 20px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.form-margin-atas
+	{
+		margin-top: 10px;
+		margin-left:10px;
+		margin-right:10px;
+	}
+
+	.form-margin-bawah
+	{
+		margin-bottom: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.button-margin
+	{
+		margin-bottom: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.btn
+	{	
+		padding: 4px;
+		font-size: 14px;
+	}
+
+	.form-control
+	{
+		height: 32px;
+		font-size: 14px;
+	}
+}

@@ -1,5 +1,6 @@
+<!-- ################################## Non Smartphone ############################################# -->
 <!-- Navigasi Atas -->
-<nav class="navbar navbar-default nav-atas" id="upPage">
+<nav class="navbar navbar-default nav-atas d-none d-sm-block" id="upPage">
   <div class="container-fluid container-navigasi">
     <div class="navbar-header">
       @guest
@@ -19,15 +20,15 @@
 
           @guest <!-- Untuk Tamu -->
           <ul>
-            <li class="text-center"><a href='/signin'><img src="{{asset('/img/icon/signin.png')}}" alt="Error load image"> Sign In</a></li>
-            <li class="text-center"><a href='/signup'><img src="{{asset('/img/icon/signup.png')}}" alt="Error load image"> Sign Up</a></li>
+            <li class="text-center"><a href='/signin'><img src="{{asset('/img/icon/signin.png')}}" alt="Error load image"> Masuk</a></li>
+            <li class="text-center"><a href='/signup'><img src="{{asset('/img/icon/signup.png')}}" alt="Error load image"> Daftar</a></li>
           </ul>
           @else <!-- Untuk user yang udah login -->
           <ul>
             <li class="text-center"><a href='/profile/{{Auth::user()->id}}'><img src="{{asset('/img/icon/profile.png')}}" alt="Error load image"> Profil</a></li>
 
             <!-- LOGOUT -->
-            <li class="text-center"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><img src="{{asset('/img/icon/logout.png')}}" alt="Error load image"> Log Out</a></li>
+            <li class="text-center"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><img src="{{asset('/img/icon/logout.png')}}" alt="Error load image"> Keluar</a></li>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}
@@ -43,7 +44,7 @@
 </nav>
 
 <!-- Navigasi Bawah -->
-<nav class="navbar navbar-expand-md navbar-light bg-light nav-bawah">
+<nav class="navbar navbar-expand-md navbar-light bg-light nav-bawah  d-none d-sm-block">
   <!-- Tombol responsive -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -53,33 +54,114 @@
     <ul class="nav justify-content-center">
       @guest
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('/') ? ' active aktif' : ''}}" href='/'>Home</a>
+          <a class="nav-link{{ Request::is('/') ? ' active aktif' : ''}}" href='/'>Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('spesialisasi') || Request::is('spesialisasi/doctor') || Request::is('spesialisasi/doctor/doctorschedule') ? ' active aktif' : ''}}" href='/spesialisasi'>Booking</a>
+          <a class="nav-link{{ Request::is('spesialisasi') || Request::is('spesialisasi/doctor') || Request::is('spesialisasi/doctor/doctorschedule') ? ' active aktif' : ''}}" href='/spesialisasi'>Pesan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>How to Booking</a>
+          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>Cara Pesan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>About</a>
+          <a class="nav-link{{ Request::is('findjadwal') ? ' active aktif' : ''}}" href='/findjadwal'>Jadwal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>Tentang</a>
         </li>
       @else
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('home') ? ' active aktif' : ''}}" href='/home'>Home</a>
+          <a class="nav-link{{ Request::is('home') ? ' active aktif' : ''}}" href='/home'>Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('spesialisasi') ? ' active aktif' : ''}}" href='/spesialisasi'>Booking</a>
+          <a class="nav-link{{ Request::is('spesialisasi') ? ' active aktif' : ''}}" href='/spesialisasi'>Pesan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>How to Booking</a>
+          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>Cara Pesan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>About</a>
+          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>Tentang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('findjadwal') ? ' active aktif' : ''}}" href='/findjadwal'>Jadwal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('findrating') ? ' active aktif' : ''}}" href='/findrating'>Rating</a>
         </li>
         <li class="nav-item">
           <a class="nav-link{{ Request::is('riwayat') ? ' active aktif' : ''}}" href='/riwayat'>Riwayat</a>
         </li>
+      @endguest
+    </ul>
+  </div>
+</nav>
+
+<!-- ################################## Untuk Smartphone ############################################# -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-sm-none nav-hp">
+  @guest
+  <a class="navbar-brand" href="/"><img src="{{asset('img/navigasi/logohp.png')}}" alt="Error load image"></a>
+  @else
+  <a class="navbar-brand" href="/home"><img src="{{asset('img/navigasi/logohp.png')}}" alt="Error load image"></a>
+  @endguest
+  <!-- Tombol responsive -->
+  <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Navigasi -->
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 border-atas">
+      @guest
+        <li class="nav-item{{ Request::is('/') ? ' active aktif' : ''}}">
+          <a class="nav-link" href='/'>Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('spesialisasi') || Request::is('spesialisasi/doctor') || Request::is('spesialisasi/doctor/doctorschedule') ? ' active aktif' : ''}}" href='/spesialisasi'>Pesan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>Cara Pesan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('findjadwal') ? ' active aktif' : ''}}" href='/findjadwal'>Jadwal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>Tentang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('login') ? ' active aktif' : ''}}" href='/signin'>Masuk<img class="float-right" src="{{asset('/img/icon/signin.png')}}" alt="Error load image"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('register') ? ' active aktif' : ''}}" href='/signup'>Daftar<img class="float-right" src="{{asset('/img/icon/signup.png')}}" alt="Error load image"></a>
+        </li>
+      @else
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('home') ? ' active aktif' : ''}}" href='/home'>Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('spesialisasi') ? ' active aktif' : ''}}" href='/spesialisasi'>Pesan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('howtobooking') ? ' active aktif' : ''}}" href='/howtobooking'>Cara Pesan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('about') ? ' active aktif' : ''}}" href='/about'>Tentang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('findjadwal') ? ' active aktif' : ''}}" href='/findjadwal'>Jadwal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('findrating') ? ' active aktif' : ''}}" href='/findrating'>Rating</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('riwayat') ? ' active aktif' : ''}}" href='/riwayat'>Riwayat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{{ Request::is('profile/{id}') ? ' active aktif' : ''}}" href='/profile/{{Auth::user()->id}}'>Profil<img class="float-right" src="{{asset('/img/icon/profile.png')}}" alt="Error load image"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Keluar<img class="float-right" src="{{asset('/img/icon/logout.png')}}" alt="Error load image"></a>
+        </li>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
       @endguest
     </ul>
   </div>

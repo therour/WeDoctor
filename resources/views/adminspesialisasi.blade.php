@@ -17,10 +17,9 @@
           <thead>
             <tr>
               <th width="50px">No.</th>
-              <th width="350px">Nama Spesialisasi</th>
+              <th width="250px">Nama Spesialisasi</th>
               <th>Deskripsi Spesialisasi</th>
-              <th width="45px"></th>
-              <th width="45px"></th>
+              <th colspan="2" width="90px" align="center"><a href='/admin/spesialisasi/tambah'><button type="button" class="btn btn-outline-info clearfix" style="width:120px;">Tambah</button></a></th>
             </tr>
           </thead>
           <tbody>
@@ -36,7 +35,7 @@
               </td>
               <td>
 
-                <form id="delete-form" action="/admin/spesialisasi/delete/{{ $spesialisasi->id }}" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus {{ $spesialisasi->nama_spesialisasi }} dari database?');">
+                <form class="form-delete" action="/admin/spesialisasi/delete/{{ $spesialisasi->id }}" method="POST">
                   {{csrf_field()}}
                   <button type="submit" class="btn btn-outline-info float-right clearfix"><img src="{{asset('/img/icon/delete.png')}}" alt="Error load image"></button>
                   <input type="hidden" name="_method" value="DELETE">
@@ -44,13 +43,38 @@
               </td>
             </tr>
             @endforeach
-            <tr>
-              <a href='/admin/spesialisasi/tambah'><button type="button" class="btn btn-outline-info float-right clearfix">Tambah</button></a>
-            </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </section>
+@endsection
+
+@section('jsadmin')
+<script>
+  $('.form-delete').submit(function (e)
+  {
+    var form = this;
+    e.preventDefault();
+    swal
+    ({
+      title: 'Apa anda yakin?',
+      text: "Ini akan menghapus secara permanent",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yakin',
+      cancelButtonText: 'Tidak'
+    }, 
+    function (result) 
+    {
+      if (result) 
+      {
+        form.submit();
+      }
+    });
+  });
+</script>
 @endsection

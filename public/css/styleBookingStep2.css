@@ -1,3 +1,8 @@
+.btn
+{
+	border: 1px solid black;
+}
+
 @media (min-width: 1200px) 
 { 
 	.final-booking
@@ -605,7 +610,156 @@
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.final-booking
+	{
+		width: 100%;
+		border: 3px solid white;
+		min-height: 250px;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/about/about.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
 
-}*/
+	.header-booking-final
+	{
+		padding: 25px;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
+	.header-booking-final h1
+	{
+		font-size: 20px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.final-booking-row
+	{
+		height: 70px;
+	}
+
+	.pertama
+	{
+		padding: 0;
+		width: 55px;
+		height: 55px;
+		background-color: #E62A3D;
+	}
+
+	.kedua
+	{
+		padding: 0;
+		width: 55px;
+		height: 55px;
+		background-color: #E62A3D;
+	}
+	
+	.ketiga
+	{
+		padding: 0;
+		width: 55px;
+		height: 55px;
+		background-color: grey;
+	}
+
+	.garis-booking1
+	{
+		padding: 0;
+		width: 75px;
+		height: 8px;
+		background-color: #E62A3D;
+	}
+
+	.garis-booking2
+	{
+		padding: 0;
+		width: 75px;
+		height: 8px;
+		background-color: grey;
+	}
+
+	.angka
+	{
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		margin-top: 15.5px;
+		margin-bottom: 15.5px;
+	}
+
+	.final-booking-row-content
+	{
+		min-height: 250px;
+		padding: 35px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.form-pasien
+	{
+		margin-left: 15px;
+		margin-bottom: 0;
+		font-size: 16px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+	}
+
+	.form-pasien-p
+	{
+		margin-left: 15px;
+		font-size: 15px;
+	}
+
+	.garis-content
+	{
+		border: 0 solid #E62A3D;
+		border-width: 1px 0 0 0;
+		border-radius: 20px;
+		height: 30px;
+		margin-bottom: 0;
+	}
+
+	.garis-content:before
+	{
+		display: block;
+		content: "";
+		margin-top: -31px;
+		border: 0 solid #E62A3D;
+		border-width: 0 0 1px 0;
+		border-radius: 20px;
+		height: 30px;
+	}
+
+	.padding-booking
+	{
+		padding: 15px;
+		padding-top: 0;
+	}
+
+	.j-k-margin
+	{
+		margin-top: 32px;
+	}
+
+	.title-output
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+
+	.font-form
+	{
+		font-size: 14px;
+	}
+}

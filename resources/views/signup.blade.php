@@ -9,8 +9,8 @@
 <section class="container-fluid signup">
   <div class="row signup-row justify-content-md-center align-items-center">
     <div class="signup-colom">
-      <h1 class="text-center">Sign Up</h1>
-      <hr>
+      <h1 class="text-center">Daftar</h1>
+      <hr class="d-none d-sm-block">
 
       <form action="{{ route('register') }}" method="POST">
         {{ csrf_field() }}
@@ -20,7 +20,7 @@
           <!-- Username -->
           <div class="form-group form-margin-atas"">
             <label for="username">Username</label>
-            <input name="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" id="username" aria-describedby="userHelp" placeholder="Nama User Anda" value="{{ old('username') }}">
+            <input name="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" id="username" aria-describedby="userHelp" placeholder="Nama User Anda" value="{{ old('username') }}" autofocus>
             <small id="userHelp" class="form-text text-muted" style="display:{{ $errors->has('username') ? 'none' : '' }}">Username wajib di isi untuk keperluan Log In anda</small>
 
             @if ($errors->has('username'))
@@ -96,7 +96,7 @@
 
           <!-- Email -->
           <div class="form-group">
-            <label for="email">Email address</label>
+            <label for="email">Alamat Email</label>
             <input name="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" aria-describedby="emailHelp" placeholder="Email Anda" value="{{ old('email') }}">
             <small id="emailHelp" class="form-text text-muted" style="display:{{ $errors->has('email') ? 'none' : '' }}">Email yang dicantumkan adalah email aktif anda</small>
 
@@ -121,11 +121,11 @@
         
         <!-- Button -->
         <div class="form-group button-margin text-right">
-          <button type="clear" class="btn btn-light">Clear</button>
-          <button type="submit" class="btn btn-light">Submit</button>
+          <button type="reset" class="btn btn-light">Hapus</button>
+          <button type="submit" class="btn btn-light">Daftar</button>
         </div>
-        
       </form>
+
     </div>
   </div>
 </section>

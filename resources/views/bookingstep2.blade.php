@@ -38,70 +38,69 @@
         <h4 class="title-output">Data Pasien</h4>
         <table class="font-form">
           <tr>
-            <td width=280px>Nama</td>
-            <td width=15px>:</td>
-            <td>{{ $pasien->nama_pasien }}</td>
+            <td width=180px valign="top">Nama</td>
+            <td width=15px valign="top">:</td>
+            <td valign="top">{{ $pasien->nama_pasien }}</td>
           </tr>
           <tr>
-            <td>Tanggal Lahir</td>
-            <td>:</td>
-            <td>{{ $pasien->tanggal_lahir_pasien }}</td>
+            <td valign="top">Tanggal Lahir</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->tanggal_lahir_pasien->format('d F Y') }}</td>
           </tr>
           <tr>
-            <td>Jenis Kelamin</td>
-            <td>:</td>
-            <td>{{ $pasien->jenis_kelamin_pasien }}</td>
+            <td valign="top">Jenis Kelamin</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->jenis_kelamin_pasien }}</td>
           </tr>
           <tr>
-            <td>Alamat</td>
-            <td>:</td>
-            <td>{{ $pasien->alamat_pasien }}</td>
+            <td valign="top">Alamat</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->alamat_pasien }}</td>
           </tr>
           <tr>
-            <td>Riwayat Penyakit</td>
-            <td>:</td>
-            <td>{{ $pasien->riwayat_sakit }}</td>
+            <td valign="top">Riwayat Penyakit</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->riwayat_sakit }}</td>
           </tr>
         </table>
 
         <h4 class="title-output">Data Doctor dan Berobat</h4>
-        <table>
+        <table class="font-form">
           <tr>
-            <td width=280px>Nomor Urut</td>
-            <td width=15px>:</td>
-            <td>{{ $pasien->no_urut }}</td>
+            <td width=180px valign="top">Nomor Urut</td>
+            <td width=15px valign="top">:</td>
+            <td valign="top">{{ $pasien->no_urut }}</td>
           </tr>
           <tr>
-            <td>Tanggal Berobat</td>
-            <td>:</td>
-            <td>{{ $pasien->tanggal_berobat }}</td>
+            <td valign="top">Tanggal Berobat</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->tanggal_berobat->format('d F Y') }}</td>
           </tr>
           <tr>
-            <td>Lokasi Berobat</td>
-            <td>:</td>
-            <td>{{ $pasien->jadwal->tempats->tempat }}</td>
+            <td valign="top">Lokasi Berobat</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->jadwal->tempats->tempat }}</td>
           </tr>
           <tr>
-            <td>Doctor Tujuan</td>
-            <td>:</td>
-            <td>{{ $pasien->jadwal->doctors->nama_doctor }}</td>
+            <td valign="top">Doctor Tujuan</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->jadwal->doctors->nama_doctor }}</td>
           </tr>
           <tr>
-            <td>Waktu Masuk Ruangan</td>
-            <td>:</td>
-            <td>{{ $pasien->waktu_masuk }}</td>
+            <td valign="top">Waktu Masuk Ruangan</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->waktu_masuk }}</td>
           </tr><tr>
-            <td>Waktu Aman Sudah Harus di Lokasi</td>
-            <td>:</td>
-            <td>{{ $pasien->waktu_aman }}</td>
+            <td valign="top">Waktu Aman Sudah Harus di Lokasi</td>
+            <td valign="top">:</td>
+            <td valign="top">{{ $pasien->waktu_aman }}</td>
           </tr>
         </table>
       </div>
       
       <!-- Button -->
-      <div class="form-group button-margin text-right">
-        <button type="button" class="btn btn-light">Send</button>
-        <a href='/bookingstep3'><button type="button" class="btn btn-light">Next</button></a>
+      <div class="form-group button-margin text-left">
+        <a href="{{ url('/sendmail/'.$pasien->id) }}"><button type="button" class="btn btn-light">Kirim Email</button></a>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
 		border: 3px solid white;
 		box-sizing: border-box;
 		margin-bottom: 8px;
-		padding-bottom: 20px;
+		padding: 0;
 	}
 
 	.howtobooking-row h1
@@ -35,7 +35,7 @@
 		border: 3px solid white;
 		box-sizing: border-box;
 		margin-bottom: 8px;
-		padding-bottom: 20px;
+		padding: 0;
 	}
 
 	.howtobooking-row h1
@@ -64,7 +64,7 @@
 		border: 3px solid white;
 		box-sizing: border-box;
 		margin-bottom: 8px;
-		padding-bottom: 15px;
+		padding: 0;
 	}
 
 	.howtobooking-row h1
@@ -93,7 +93,7 @@
 		border: 3px solid white;
 		box-sizing: border-box;
 		margin-bottom: 6px;
-		padding-bottom: 10px;
+		padding: 0;
 	}
 
 	.howtobooking-row h1
@@ -114,7 +114,31 @@
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.howtobooking
+	{
+		width: 100%;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 6px;
+		padding: 0;
+	}
 
-}*/
+	.howtobooking-row h1
+	{
+		margin: auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-size: 18px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.howtobooking-colom img
+	{
+		width: 100%;
+	}
+}

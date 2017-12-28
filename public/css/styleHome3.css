@@ -4,8 +4,7 @@
 	{
 		margin: auto;
 		width: 0px;
-		height: 250px;
-		border-left: 20px dotted white;
+		height: 200px;
 		box-sizing: border-box;
 	}
 
@@ -79,8 +78,7 @@
 	{
 		margin: auto;
 		width: 0px;
-		height: 180px;
-		border-left: 15px dotted white;
+		height: 140px;
 		box-sizing: border-box;
 	}
 
@@ -148,8 +146,7 @@
 	{
 		margin: auto;
 		width: 0px;
-		height: 120px;
-		border-left: 15px dotted white;
+		height: 110px;
 		box-sizing: border-box;
 	}
 
@@ -272,7 +269,74 @@
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.fitur-row /*untuk tinggi features*/
+	{
+		min-height: 250px;
+		padding: 40px;
+	}
 
-}*/
+	.fitur
+	{
+		margin-left: 10px;
+		font-size: 22px;
+		color: #E62A3D;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	.fitur-image
+	{
+		width: 100px;
+	}
+
+	.figure
+	{
+		margin: 0;
+	}
+
+	.fitur-home /*untuk lebar features*/
+	{
+		width: 100%;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		border: 3px solid white;
+		box-sizing: border-box;
+  		background-image: url(../img/home/fitur/background.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+
+	.lokasi:hover img
+	{
+	    transform: scale(1.2);
+	}
+
+	.jadwal:hover img
+	{
+	    transform: scale(1.2);
+	}
+
+	.feedback:hover img
+	{
+	    transform: scale(1.2);
+	}
+
+	.figure-caption
+	{
+		font-size: 12px;
+	}
+
+	.margin-features
+	{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	.margin-caption
+	{
+		margin-top: 10px;
+	}
+}

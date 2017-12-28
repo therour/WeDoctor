@@ -9,7 +9,7 @@
 <section class="container-fluid final-booking">
   <div class="row">
     <div class="col-sm-12 header-booking-final">
-      <h1 class="text-center">Booking</h1>
+      <h1 class="text-center">Daftar</h1>
     </div>
   </div>
   <div class="row final-booking-row justify-content-center align-items-center">
@@ -28,7 +28,7 @@
 
   <!-- Content -->
   <div class="row final-booking-row-content justify-content-center align-items-center">
-    <div class="col-sm-12">
+    <div class="col-sm-12 padding-pasien">
       <h1 class="form-pasien">Data Diri Pasien</h1>
       <p class="form-pasien-p">Isikan data diri pasien yang di daftarkan</p>
       <hr class="garis-content">
@@ -39,8 +39,14 @@
           <!-- Nama -->
           <div class="form-group">
             <label class="label-font-size" for="nama">Nama Pasien</label>
-            <input name="nama_pasien" type="text" class="form-control input-size" id="inputEmail4" placeholder="Nama Pasien">
+            <input name="nama_pasien" type="text" class="form-control input-size{{ $errors->has('nama_pasien') ? ' is-invalid' : '' }}" id="inputEmail4" placeholder="Nama Pasien" value="{{ old('nama_pasien') }}">
+            @if ($errors->has('nama_pasien'))
+              <div class="invalid-feedback">
+                {{ $errors->first('nama_pasien') }}
+              </div>
+            @endif
           </div>
+
           <!-- Tanggal Lahir -->
           <div class="form-group">
             <label class="label-font-size" for="tanggalLahir">Tanggal Lahir</label>
@@ -79,9 +85,9 @@
         </div>
         
         <!-- Button -->
-        <div class="form-group button-margin text-right">
-          <button type="clear" class="btn btn-light">Clear</button>
-          <button type="submit" class="btn btn-light">Submit</button></a>
+        <div class="form-group button-margin text-center">
+          <button type="reset" class="btn btn-light">Hapus</button>
+          <button type="submit" class="btn btn-light">Daftar</button></a>
         </div>
       </form>
     </div>

@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
 
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/img/tab/tab.png')}}">
+
     <title>We Doct</title>
 
     <!-- Required meta tags -->
@@ -15,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/css/styleNavigasi.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/styleFooterCopyright.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/css/sweetalert.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset('/css/bootstrap-select.min.css')}}"> -->
     @yield('css')
 
   </head>
@@ -30,9 +34,14 @@
         </div>
       </div>
     </section>
+    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS offline-->
     <script type="text/javascript" src="{{asset('/js/jquery-3.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/sweetalert.min.js')}}"></script>
+    <!-- <script type="text/javascript" src="{{asset('/js/bootstrap-select.min.js')}}"></script> -->
+    @include('sweet::alert')
     @yield('js')
     <script type="text/javascript" src="{{asset('/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('/js/bootstrap.min.js')}}"></script>

@@ -18,11 +18,16 @@
     Auth::routes();
 
 // Routing untuk kalo dah registrasi dan login
+    Route::get('/prosesUser', 'SuksesController@alertUser');
+    Route::get('/prosesAdmin', 'AdminController@alertAdmin');
+    Route::get('/prosesSignup', 'SuksesController@alertUserRegister');
+    Route::get('/prosesRating', 'SuksesController@alertUserRating');
+
     Route::get('/home', 'HomeController@getView')->name('home');
     Route::get('/admin', 'AdminController@getViewHome')->name('admin');
 
     Route::post('/bookingstep1', 'BookingController@getViewStep1');
-    Route::post('/bookingstep2', 'BookingController@getViewStep2');
+    Route::post('/bookingstep2', 'BookingController@getViewStep2'); 
     Route::get('/bookingstep3', 'BookingController@getViewStep3');
 
     Route::get('/findrating', 'BookingController@getViewFindRating');
@@ -52,4 +57,6 @@
     Route::get('/admin/user', 'AdminController@getViewUser');
     Route::delete('/admin/user/delete/{id}', 'AdminController@deleteUser');
 
+// Routing Mail Sending
+    Route::get('/sendmail/{pasien}', 'SendEmailController@sendmail');
 

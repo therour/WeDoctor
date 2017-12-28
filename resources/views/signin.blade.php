@@ -9,8 +9,8 @@
 <section class="container-fluid signin">
   <div class="row signin-row justify-content-md-center align-items-center">
     <div class="signin-colom">
-      <h1 class="text-center">Sign In</h1>
-      <hr>
+      <h1 class="text-center">Masuk</h1>
+      <hr class="d-none d-sm-block">
 
       <form action="{{ route('login') }}" method="post">
         {{ csrf_field() }}
@@ -36,8 +36,8 @@
           @endif
         </div>
         <div class="form-group button-margin text-right">
-          <button type="clear" class="btn btn-light">Clear</button>
-          <button type="submit" class="btn btn-light">Submit</button>
+          <button type="reset" class="btn btn-light">Hapus</button>
+          <button type="submit" class="btn btn-light">Masuk</button>
         </div>
       </form>
     </div>

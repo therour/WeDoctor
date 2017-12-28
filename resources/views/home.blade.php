@@ -11,20 +11,21 @@
 @section('content')
 
 @auth
-<div class="alert alert-success" role="alert">
-  <div class="text-center">
-    Selamat datang {{ Auth::user()->nama }}
+<div class="alert alert-success" role="alert"  style="margin-bottom:8px;height: 50px;">
+  <div class="text-left">
+    <!-- TAG MARQUEE INI UNTUK ANIMASI TEKS BERJALAN-->
+    <marquee>Selamat datang <b>{{ Auth::user()->nama }}</b></marquee>
   </div>
 </div>
 @endauth
 
 <!-- Isi home 1 (HOME) -->
-<div class="home col-md-12">
+<div class="home col-sm-12">
     <!-- Import gambar background lewat css -->
   <div class="home1">
-    <h1>What is WeDoct?</h1>
+    <h1>Apa itu WeDoct?</h1>
     <p>WeDoct adalah sebuah sistem informasi yang didesain untuk mempermudah pasien dalam hal booking dokter. Kenapa harus WeDoct? </p>
-    <p><a class="readMore" href='/about'>Read More >></a></p>
+    <p><a class="readMore" href='/about'>Selengkapnya >></a></p>
   </div>
 </div>
 
@@ -34,7 +35,7 @@
     <div class="lokasi col-sm-2 offset-sm-2 text-center">
       <figure class="figure">
         <a href='/findmaps'><img class="fitur-image" src="{{asset('/img/home/fitur/location.png')}}" alt="Error load image"></a>
-        <figcaption class="figure-caption">Find the hospital you want to go to</figcaption>
+        <figcaption class="figure-caption">Cari Lokasi</figcaption>
       </figure>
     </div>
     <div class="col-sm-1">
@@ -45,7 +46,7 @@
     <div class="jadwal col-sm-2 text-center">
       <figure class="figure">
         <a href='/findjadwal'><img class="fitur-image" src="{{asset('/img/home/fitur/jadwal.png')}}" alt="Error load image"></a>
-        <figcaption class="figure-caption">Locate your nearest doctor's schedule</figcaption>
+        <figcaption class="figure-caption">Cari Jadwal Dokter</figcaption>
       </figure>
     </div>
     <div class="col-sm-1">
@@ -56,7 +57,7 @@
     <div class="feedback col-sm-2 text-center">
       <figure class="figure">
         <a href='/findrating'><img class="fitur-image" src="{{asset('/img/home/fitur/feedback.png')}}" alt="Error load image"></a>
-        <figcaption class="figure-caption">Give your rating for quality improvement</figcaption>
+        <figcaption class="figure-caption">Berikan Rating Dokter</figcaption>
       </figure>
     </div>
   </div>
@@ -68,19 +69,43 @@
     <div class="lokasi col-sm-3 text-center">
       <figure class="figure">
         <a href='/findmaps'><img class="fitur-image" src="{{asset('/img/home/fitur/location.png')}}" alt="Error load image"></a>
-        <figcaption class="figure-caption">Find the hospital you want to go to</figcaption>
+        <figcaption class="figure-caption">Cari Lokasi</figcaption>
       </figure>
     </div>
     <div class="jadwal col-sm-3 text-center">
       <figure class="figure">
         <a href='/findjadwal'><img class="fitur-image" src="{{asset('/img/home/fitur/jadwal.png')}}" alt="Error load image"></a>
-        <figcaption class="figure-caption">Locate your nearest doctor's schedule</figcaption>
+        <figcaption class="figure-caption">Cari Jadwal Dokter</figcaption>
       </figure>
     </div>
     <div class="feedback col-sm-3 text-center">
       <figure class="figure">
         <a href='/findrating'><img class="fitur-image" src="{{asset('/img/home/fitur/feedback.png')}}" alt="Error load image"></a>
-        <figcaption class="figure-caption">Give your rating for quality improvement</figcaption>
+        <figcaption class="figure-caption">Berikan Rating Dokter</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SmartPhone -->
+<section class="container-fluid fitur-home d-block d-sm-none">
+  <div class="row fitur-row align-items-center justify-content-sm-center">
+    <div class="lokasi col-md-12 text-center">
+      <figure class="figure">
+        <a href='/findmaps'><img class="fitur-image" src="{{asset('/img/home/fitur/location.png')}}" alt="Error load image"></a>
+        <figcaption class="figure-caption margin-caption">Cari Lokasi</figcaption>
+      </figure>
+    </div>
+    <div class="jadwal col-md-12 text-center margin-features">
+      <figure class="figure">
+        <a href='/findjadwal'><img class="fitur-image" src="{{asset('/img/home/fitur/jadwal.png')}}" alt="Error load image"></a>
+        <figcaption class="figure-caption margin-caption">Cari Jadwal Dokter</figcaption>
+      </figure>
+    </div>
+    <div class="feedback col-md-12 text-center">
+      <figure class="figure">
+        <a href='/findrating'><img class="fitur-image" src="{{asset('/img/home/fitur/feedback.png')}}" alt="Error load image"></a>
+        <figcaption class="figure-caption margin-caption">Berikan Rating Dokter</figcaption>
       </figure>
     </div>
   </div>
@@ -89,37 +114,27 @@
 <!-- Footer Tablet hingga Laptop -->
 <section class="container-fluid footer d-none d-md-block">
   <div class="row footer-row justify-content-md-center">
-    <div class="col-sm-3 text-center">
+    <div class="col-sm-4 garis text-center">
       <h2>Kebijakan</h2>
-      <p class="text-right">Kami menghargai privasi setiap orang yang mengunjungi situs web ini. Karenanya, kami bermaksud menyampaikan kepada Anda perihal bagaimana kami menggunakan data pribadi Anda. Kami sarankan agar Anda membaca kebijakan privasi ini sehingga Anda memahami pendekatan kami dalam menggunakan data pribadi Anda.</p>
-      <a class="readMore" href='/about'>Read More >></a>
+      <p class="text-center bawah">Kami menghargai privasi setiap orang yang mengunjungi situs web ini. Karenanya, kami bermaksud menyampaikan kepada Anda perihal bagaimana kami menggunakan data pribadi Anda.</p>
+      <a class="readMore" href='/about'>Selengkapnya >></a>
     </div>
-    <div class="col-sm-1 g-v">
-      <div class="garis-vertical-footer">
-        <!-- Garis Vertical -->
-      </div>
-    </div>
-    <div class="col-sm-3 text-center">
+    <div class="col-sm-4 garis text-center">
       <h2>Ketentuan</h2>
-      <p>Berikut merupakan berbagai peraturan dan ketentuan yang perlu diperhatikan di dalam pemesanan dokter.</p>
-      <a class="readMore" href='/about'>Read More >></a>
+      <p class="bawah">Berikut merupakan berbagai peraturan dan ketentuan yang perlu diperhatikan di dalam pemesanan dokter.</p>
+      <a class="readMore" href='/about'>Selengkapnya >></a>
     </div>
-    <div class="col-sm-1 g-v">
-      <div class="garis-vertical-footer">
-        <!-- Garis Vertical -->
-      </div>
-    </div>
-    <div class="col-sm-3 text-center">
-      <h2>Contact</h2>
-      <p class="text-left">Jalan Kaliurang KM 14,5, Umbulmartani, Ngemplak, Umbulmartani, Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55584.</p>
-      <p class="text-left">Telp (0274) 868584</p>
-      <p class="text-left">WeDoct.com</p>
+    <div class="col-sm-4 text-center">
+      <h2>Kontak</h2>
+      <p class="text-center bawah">Jalan Kaliurang KM 14,5, Umbulmartani, Ngemplak, Umbulmartani, Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55584.</p>
+      <p class="text-center bawah">Telp (0274) 868584</p>
+      <p class="text-center bawah">WeDoct.com</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER Tablet -->
-<section class="container-fluid d-none d-sm-block d-md-none">
+<section class="container-fluid footer-fluid d-block d-md-none">
   <div id="accordion" role="tablist">
     <div class="card">
       <div class="card-header" role="tab" id="headingOne">
@@ -154,7 +169,7 @@
       <div class="card-header" role="tab" id="headingThree">
         <h5 class="mb-0">
           <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Contact
+            Kontak
           </a>
         </h5>
       </div>
@@ -170,8 +185,25 @@
 </section>
 
 <div class="up">
-  <a href="#" id="up"><img src="{{asset('/img/up/up.png')}}" alt="Error load image"></a>
+  <a href="#" id="up"><img src="{{asset('/img/up/up.png')}}" alt="Error load image" onclick="scrolltotop()"></a>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  $(window).scroll(function(){
+    if ($(window).scrollTop() > 100) {
+      $('#tombolScrollTop').fadeIn();
+    } else {
+      $('#tombolScrollTop').fadeOut();
+    }
+  });
+});
+
+function scrolltotop()
+{
+  $('html, body').animate({scrollTop : 0},500);
+}
+</script>
 @endsection
 
 @section('js')

@@ -9,7 +9,7 @@
 <section class="container-fluid doctor-schedule">
   <div class="row doctor-schedule-row">
     <div class="col-sm-12 header-doctor-schedule">
-      <h1>Doctor's Schedule</h1>
+      <h1>Jadwal Dokter</h1>
     </div>
   </div>
 
@@ -20,7 +20,7 @@
         <div class="card">
           <h4 class="card-header card-header-font">Profil Doctor</h4>
           <div class="card-body">
-            <div class="card-kiri float-left text-center">
+            <div class="card-kiri float-left text-center d-none d-md-block">
               <!-- Import background -->
               <img src="{{asset('/img/booking/doctor/doctor.png')}}" alt="Error load image" class="rounded-circle pict-doctor">
             </div>
@@ -43,37 +43,59 @@
                   <td>{{ $doctor->alamat_doctor }}</td>
                 </tr>
                 <tr>
-                  <td>Pengalaman</td>
+                  <td>Status</td>
                   <td>: </td>
-                  <td>{{ $doctor->pengalaman_doctor }}</td>
+                  <td>{{ $doctor->status }}</td>
                 </tr>
               </table>
-
-              <!-- Jadwal -->
-              <h4 class="card-title">Jadwal Dokter</h4>
-              @foreach($jadwals as $jadwal)
-                <div class="custom-controls-stacked">
-                  <label class="custom-control custom-radio">
-                    <input id="jadwalDoctor" name="jadwalDoctor" type="radio" class="custom-control-input" value="{{ $jadwal->id }}">
-                    <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description custom-control-description-font">{{ $jadwal->hari }} : {{ $jadwal->waktu_mulai }} - {{ $jadwal->waktu_akhir }} ({{ $jadwal->tempats->tempat }})</span>
-                  </label>
+              <!-- Sertifikat -->
+              <h4 class="card-title" style="display: inline-block;margin-right: 10px;">Sertifikat Dokter</h4>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-lg" style="border-radius: 24px;padding-top: 0;padding-bottom: 0;">Lihat</button>
+              <!-- Modal -->
+              <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Sertifikat {{ $doctor->nama_doctor }}</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-thumbnail sertifikat" src="{{asset('/img/booking/doctor/sertifikat.jpg')}}" alt="">
+                    </div>
+                  </div>
                 </div>
-              @endforeach 
-            </div>
-            <!-- Sertifikat -->
-            <div class="container-sertifikat clearfix float-right">
-              <h4 class="text-center sertifikat-font">Sertifikat</h4>
-              <img class="img-thumbnail sertifikat" src="{{asset('/img/booking/doctor/sertifikat.jpg')}}" alt=""></td>
+              </div>
+              <!-- Jadwal -->
+              <h4 class="card-title" style="margin-top:0;">Jadwal Dokter</h4>
+                @foreach($jadwals as $jadwal)
+                  <div class="custom-controls-stacked">
+                    <label class="custom-control custom-radio">
+                      <input id="jadwalDoctor" name="jadwalDoctor" type="radio" class="custom-control-input{{ $errors->has('jadwalDoctor') ? ' is-invalid' : '' }}" value="{{ $jadwal->id }}">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description custom-control-description-font">{{ $jadwal->hari }} : {{ $jadwal->waktu_mulai }} - {{ $jadwal->waktu_akhir }} ({{ $jadwal->tempats->tempat }})</span>
+                    </label>
+                  </div>
+                @endforeach 
+                
+                @if($errors->has('jadwalDoctor'))
+                  <div class="alert alert-danger" style="padding:0;padding-left:5px;margin:0;">
+                    Anda belum memilih jadwal
+                  </div>
+                @endif
+
+
             </div>
             <div class="pemanis clearfix">
-              <!-- untuk clearfix -->
+              <!-- Pemanis -->
             </div>
-
+          </div>
+          <div class="card-footer text-center">
             @guest
-              <button type="button" class="btn btn-outline-info float-right">Mohon login dulu untuk dapat melakukan booking doctor !!</button></a>
+              <a href="/howtobooking"><button type="button" class="btn btn-outline-info">Daftar?</button></a>
             @else
-              <button type="submit" class="btn btn-outline-info float-right">Booking</button></a>
+              <button type="submit" class="btn btn-outline-info">Daftar</button></a>
             @endguest
           </div>
         </div>

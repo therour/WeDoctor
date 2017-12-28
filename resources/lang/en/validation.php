@@ -15,7 +15,12 @@ return [
 
     'accepted'             => 'The :attribute must be accepted.',
     'active_url'           => 'The :attribute is not a valid URL.',
-    'after'                => 'The :attribute must be a date after :date.',
+
+    // ##################
+    // 'after'                => 'The :attribute must be a date after :date.',
+    'after'                => ':attribute harus sesudah :date',
+    // ##################
+
     'after_or_equal'       => 'The :attribute must be a date after or equal to :date.',
     'alpha'                => 'The :attribute may only contain letters.',
     'alpha_dash'           => 'The :attribute may only contain letters, numbers, and dashes.',
@@ -37,7 +42,13 @@ return [
     // ##################
 
     'date'                 => 'The :attribute is not a valid date.',
-    'date_format'          => 'The :attribute does not match the format :format.',
+
+    // ##################
+    // 'date_format'          => 'The :attribute does not match the format :format.',
+    'date_format'          => 'Format :attribute salah',
+    // ##################
+
+
     'different'            => 'The :attribute and :other must be different.',
     'digits'               => 'The :attribute must be :digits digits.',
     'digits_between'       => 'The :attribute must be between :min and :max digits.',
@@ -74,7 +85,11 @@ return [
 
         'array'   => 'The :attribute must have at least :min items.',
     ],
-    'not_in'               => 'The selected :attribute is invalid.',
+    // #############
+    // 'not_in'               => 'The selected :attribute is invalid.',
+    'not_in'               => 'Anda belum memilih :attribute',
+    // #############
+
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',

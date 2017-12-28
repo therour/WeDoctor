@@ -10,11 +10,9 @@
 <section class="container-fluid" style="padding:0">
   <div class="row">
     <div class="col-sm-12">
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        Selamat datang <strong>{{ Auth::user()->nama }}</strong>. Anda sukses login sebagai Admin.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div class="alert alert-success" role="alert" style="margin-bottom:8px;height: 50px;">
+        <!-- TAG MARQUEE INI UNTUK ANIMASI TEKS BERJALAN-->
+        <marquee>Selamat datang <strong>{{ Auth::user()->nama }}</strong> di halaman admin We Doctor</b></marquee>
       </div>
     </div>
   </div>

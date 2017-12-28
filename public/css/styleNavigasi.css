@@ -605,7 +605,37 @@
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.navbar
+	{
+		width: 100%;
+		background-image: url(../img/navigasi/background.png);
+		box-sizing: border-box;
+		margin-bottom: 8px;
+	}
 
-}*/
+	.nav-hp
+	{
+		margin-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+	}
+
+	.border-atas
+	{
+		border-top: 2px solid black;
+	}
+
+	.nav-link
+	{
+		font-size: 14px;
+		font-weight: bold;
+		color: grey;
+	}
+
+	.aktif
+	{
+		color: #E62A3D;
+	}
+}

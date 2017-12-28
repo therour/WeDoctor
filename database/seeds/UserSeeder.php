@@ -32,5 +32,16 @@ class UserSeeder extends Seeder
             'jenis_kelamin' => 'Laki-laki',
             'nik' => '16523177'
         ]);
+
+        DB::table('users')->insert([
+            'username' => 'bamasatya',
+            'password' => bcrypt('bamasatya'),
+            'nama' => 'Bamasatya Hendraprasta',
+            'status' => 'user',
+            'email' => '16523177@students.uii.ac.id',
+            'alamat' => 'Jalan K.H Ahmad Dahlan',
+            'jenis_kelamin' => 'Laki-laki',
+            'nik' => '16523177'
+        ]);
     }
 }

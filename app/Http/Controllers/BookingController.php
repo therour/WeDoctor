@@ -11,6 +11,8 @@ use App\Pasien;
 use App\User;
 use Auth;
 use DB;
+use Alert;
+use Carbon\Carbon;
 
 class BookingController extends Controller
 {
@@ -109,6 +111,7 @@ class BookingController extends Controller
     public function getViewFindRating(Request $request)
     {
         // $pasiens = $request->user()->pasiens()->get(); <<<< kalo mau sesuai dokter yang udah pernah user singgahin
+        
         $doctors = Doctor::all();
 
         return view('findrating', ['doctors' => $doctors]);
@@ -116,6 +119,11 @@ class BookingController extends Controller
 
     public function submitrating(Request $request)
     {
+        $this->validate($request,[
+            'doctor_id' => 'required|not_in:null',
+            'rating_user' => 'required|not_in:null',
+        ]);
+
         // Untuk melihat ada dokter_id dan user_id yang sama ga di database
         $ada = count(DB::table('ratings')->where('doctor_id', $request->doctor_id)->where('user_id', $request->user()->id)->get()) > 0;
 
@@ -151,7 +159,7 @@ class BookingController extends Controller
         $doctor->rating = $rating_baru;
         $doctor->save();
 
-        return redirect()->back();
+        return redirect('/prosesRating');
     }
 
     public function getViewRiwayat(Request $request)
@@ -170,6 +178,14 @@ class BookingController extends Controller
 
     public function editProfile(Request $request, $id)
     {
+        $this->validate($request,[
+            'username' => 'required',
+            'nama' => 'required',
+            'alamat' => 'required',
+            'nik' => 'required',
+            'email' => 'required',
+        ]);
+
         $user = User::find($id);
 
             $user->username = $request->username;
@@ -179,6 +195,8 @@ class BookingController extends Controller
             $user->email = $request->email;
 
         $user->save();
+
+        Alert::success('Edit profil sukses dilakukan', 'Sukses')->autoclose(3000);
 
         return redirect('/profile/{$id}');
     }

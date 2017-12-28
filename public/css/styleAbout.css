@@ -35,7 +35,18 @@
 		text-align: center;
 	}
 
+	.about-colom h4
+	{
+		font-size: 24px;
+	}
+
 	.about-colom p
+	{
+	    font-size: 17px;
+	    font-style: italic;
+	}
+
+	.about-colom li
 	{
 	    font-size: 17px;
 	    font-style: italic;
@@ -65,8 +76,8 @@
 	.about-colom
 	{
 		padding: 25px;
-		padding-left: 80px;
-		padding-right: 80px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 
 	.about-colom h1
@@ -80,6 +91,17 @@
 	}
 
 	.about-colom p
+	{
+	    font-size: 16px;
+	    font-style: italic;
+	}
+
+	.about-colom h4
+	{
+		font-size: 20px;
+	}
+
+	.about-colom li
 	{
 	    font-size: 16px;
 	    font-style: italic;
@@ -116,7 +138,7 @@
 	.about-colom h1
 	{
 		margin-bottom: 20px;
-		font-size: 20px;
+		font-size: 22px;
 		font-style: italic;
 		color: #E62A3D;
 		font-weight: bold;
@@ -125,14 +147,25 @@
 
 	.about-colom p
 	{
-	    font-size: 15px;
+	    font-size: 16px;
 	    font-style: italic;
+	}
+	
+	.about-colom li
+	{
+	    font-size: 16px;
+	    font-style: italic;
+	}
+
+	.about-colom h4
+	{
+		font-size: 18px;
 	}
 }
 
 @media (min-width: 576px) and (max-width: 767px) 
 { 
-	 .about
+	.about
 	{
 		width: 100%;
 		border: 3px solid white;
@@ -160,7 +193,7 @@
 	.about-colom h1
 	{
 		margin-bottom: 20px;
-		font-size: 18px;
+		font-size: 22px;
 		font-style: italic;
 		color: #E62A3D;
 		font-weight: bold;
@@ -169,12 +202,73 @@
 
 	.about-colom p
 	{
-	    font-size: 13px;
+	    font-size: 16px;
 	    font-style: italic;
+	}
+	
+	.about-colom li
+	{
+	    font-size: 16px;
+	    font-style: italic;
+	}
+	
+	.about-colom h4
+	{
+		font-size: 18px;
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.about
+	{
+		width: 100%;
+		border: 3px solid white;
+		min-height: 350px;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/about/about.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
 
-}*/
+	.about-row
+	{
+		min-height: 350px;
+	}
+
+	.about-colom
+	{
+		padding: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.about-colom h1
+	{
+		margin-bottom: 20px;
+		font-size: 22px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.about-colom p
+	{
+	    font-size: 16px;
+	    font-style: italic;
+	}
+	
+	.about-colom li
+	{
+	    font-size: 16px;
+	    font-style: italic;
+	}
+	
+	.about-colom h4
+	{
+		font-size: 18px;
+	}
+}

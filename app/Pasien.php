@@ -12,6 +12,12 @@ class Pasien extends Model
         'nama_pasien', 'tanggal_lahir_pasien', 'jenis_kelamin_pasien', 'alamat_pasien', 'riwayat_sakit', 'no_urut', 'tanggal_berobat', 'waktu_masuk', 'waktu_aman', 'user_id', 'jadwal_id'
     ];
 
+    // biar bisa di carbon format
+    protected $dates = [
+        'tanggal_lahir_pasien' ,
+        'tanggal_berobat' ,
+    ];
+
     public function jadwal()
     {
     	return $this->belongsTo(Jadwal::class);

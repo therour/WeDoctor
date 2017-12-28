@@ -10,7 +10,7 @@ use App\Rating;
 class Doctor extends Model
 {
     protected $fillable = [
-        'nama_doctor', 'alamat_doctor', 'pengalaman_doctor', 'spesialisasi_id', 'rating'
+        'nama_doctor', 'alamat_doctor', 'status', 'spesialisasi_id', 'rating'
     ];
 
     public function spesialisasi()

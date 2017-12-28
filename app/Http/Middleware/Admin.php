@@ -22,7 +22,7 @@ class Admin
         }
         if(Auth::user()->status != 'admin')
         {
-            return redirect('/home');
+            return redirect('/prosesUser');
         }
         return $next($request);
     }

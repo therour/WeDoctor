@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{asset('/css/styleAbout.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('/css/styleProfile.css')}}">
 @endsection
 
 @section('content')
@@ -12,61 +13,100 @@
       <h1>Profil</h1>
 
       <div class="card text-center">
-        <div class="card-header">
+        <div class="card-header spesialisasi-background-title">
           <b>Data Diri User</b>
         </div>
 
-        <form id="edit-form" action="/profile/{{Auth::user()->id}}" method="POST">
+        <form class="form-edit" action="/profile/{{Auth::user()->id}}" method="POST">
         {{ csrf_field() }}
-          <div class="card-body text-left">
+
+          <div class="card-body text-left spesialisasi-background">
+
             <!-- Username -->
             <div class="form-group row">
               <label for="username" class="col-sm-2 col-form-label">Username</label>
               <div class="col-sm-10">
-                <input name="username" type="text" class="form-control" value="{{Auth::user()->username}}">
+                <input name="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" value="{{Auth::user()->username}}">
+
+                @if($errors->has('username'))
+                  <div class="invalid-feedback">
+                    @foreach($errors->get('username') as $message)
+                      {{$message}}
+                    @endforeach
+                  </div>
+                @endif
               </div>
             </div>
+
             <!-- Nama -->
             <div class="form-group row">
-              <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
+              <label for="nama" class="col-sm-2 col-form-label">Nama</label>
               <div class="col-sm-10">
-                <input name="nama" type="text" class="form-control" value="{{Auth::user()->nama}}">
+                <input name="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" value="{{Auth::user()->nama}}">
+
+                @if($errors->has('nama'))
+                  <div class="invalid-feedback">
+                    @foreach($errors->get('nama') as $message)
+                      {{$message}}
+                    @endforeach
+                  </div>
+                @endif
               </div>
             </div>
-            <!-- Jenis Kelamin -->
-            
+
             <!-- NIK -->
             <div class="form-group row">
               <label for="nik" class="col-sm-2 col-form-label">NIK</label>
               <div class="col-sm-10">
-                <input name="nik" type="number" class="form-control" value="{{Auth::user()->nik}}">
+                <input name="nik" type="number" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" value="{{Auth::user()->nik}}">
+
+                @if($errors->has('nik'))
+                  <div class="invalid-feedback">
+                    @foreach($errors->get('nik') as $message)
+                      {{$message}}
+                    @endforeach
+                  </div>
+                @endif
               </div>
             </div>
+
             <!-- Email -->
             <div class="form-group row">
               <label for="email" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <input name="email" type="email" class="form-control" id="email" value="{{Auth::user()->email}}">
+                <input name="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" value="{{Auth::user()->email}}">
+
+                @if($errors->has('email'))
+                  <div class="invalid-feedback">
+                    @foreach($errors->get('email') as $message)
+                      {{$message}}
+                    @endforeach
+                  </div>
+                @endif
               </div>
             </div>
+
             <!-- Alamat -->
             <div class="form-group row">
               <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
               <div class="col-sm-10">
-                <input name="alamat" type="text" class="form-control" id="alamat" value="{{Auth::user()->alamat}}">
+                <textarea name="alamat" type="text" class="form-control{{ $errors->has('alamat') ? ' is-invalid' : '' }}" id="alamat">{{Auth::user()->alamat}}</textarea>
+
+                @if($errors->has('alamat'))
+                  <div class="invalid-feedback">
+                    @foreach($errors->get('alamat') as $message)
+                      {{$message}}
+                    @endforeach
+                  </div>
+                @endif
               </div>
             </div>
           </div>
-          <div class="card-footer text-muted">
-            <button type="button" class="btn btn-light btn-md"
-              onclick="
-              var result = confirm('Apakah anda yakin ingin mengubah?');
-              if(result)
-              {
-                event.preventDefault();
-                document.getElementById('edit-form').submit();
-              }
-            "><b>EDIT</b></button>
+
+          <div class="card-footer spesialisasi-background-title">
+
+            <button type="submit" class="btn btn-outline-info btn-md"><b>EDIT</b></button>
+
           </div>
           <input type="hidden" name="_method" value="PUT">
         </form>
@@ -74,4 +114,32 @@
     </div>
   </div>
 </section>
+@endsection
+
+@section('js')
+<script>
+  $('.form-edit').submit(function (e)
+  {
+    var form = this;
+    e.preventDefault();
+    swal
+    ({
+      title: 'Apa anda yakin?',
+      text: "Ini akan mengubah data yang ada di database",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yakin',
+      cancelButtonText: 'Tidak'
+    }, 
+    function (result) 
+    {
+      if (result) 
+      {
+        form.submit();
+      }
+    });
+  });
+</script>
 @endsection

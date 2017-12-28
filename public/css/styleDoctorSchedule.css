@@ -1,3 +1,9 @@
+.card-footer
+{
+	padding: 0;
+	height: 40px;
+}
+
 @media (min-width: 1200px) 
 { 
 	.doctor-schedule
@@ -23,7 +29,7 @@
 	.header-doctor-schedule h1
 	{
 		margin-top: 20px;
-		margin-bottom: 35px;
+		margin-bottom: 20px;
 		font-size: 28px;
 		font-style: italic;
 		color: #E62A3D;
@@ -34,20 +40,22 @@
 	.btn-outline-info
 	{
 		color: #E62A3D;
-		border-color: #E62A3D;
-		margin-top: 20px;
+		width: 100%;
+		height: 40px;
+		border:none;
 	}
 
 	.btn-outline-info:hover
 	{
 		background-color: #E62A3D;
-		border-color: #E62A3D;
+		height: 40px;
+		border:none;
 	}
 
 	.card-kiri
 	{
 		width: 400px;
-		height: 400px;
+		height: 320px;
 		margin-right: 20px;
 		background-image: url(../img/booking/doctor/background.png);
 		background-size: cover;
@@ -57,12 +65,7 @@
 	{
 		width: 250px;
 		height: 250px;
-		margin-top: 75px;
-	}
-
-	.card-kanan
-	{
-		
+		margin-top: 40px;
 	}
 
 	.margin-top-card-title
@@ -79,7 +82,12 @@
 
 	.sertifikat
 	{
-		width: 250px;
+		width: 100%;
+	}
+
+	.card-body
+	{
+		padding-bottom: 20;
 	}
 }
 
@@ -88,7 +96,7 @@
 	.doctor-schedule
 	{
 		width: 100%;
-		padding: 30px;
+		padding: 20px;
 		padding-top: 0;
 		border: 3px solid white;
 		box-sizing: border-box;
@@ -108,7 +116,7 @@
 	.header-doctor-schedule h1
 	{
 		margin-top: 20px;
-		margin-bottom: 35px;
+		margin-bottom: 20px;
 		font-size: 24px;
 		font-style: italic;
 		color: #E62A3D;
@@ -119,14 +127,16 @@
 	.btn-outline-info
 	{
 		color: #E62A3D;
-		border-color: #E62A3D;
-		margin-top: 20px;
+		width: 100%;
+		height: 40px;
+		border:none;
 	}
 
 	.btn-outline-info:hover
 	{
 		background-color: #E62A3D;
-		border-color: #E62A3D;
+		height: 40px;
+		border:none;
 	}
 
 	.card-kiri
@@ -140,9 +150,9 @@
 	
 	.pict-doctor
 	{
-		width: 150px;
-		height: 150px;
-		margin-top: 75px;
+		width: 250px;
+		height: 250px;
+		margin-top: 40px;
 	}
 
 	.margin-top-card-title
@@ -161,7 +171,7 @@
 
 	.sertifikat
 	{
-		width: 170px;
+		width: 100%;
 	}
 
 	.card-header-font
@@ -185,7 +195,7 @@
 	.doctor-schedule
 	{
 		width: 100%;
-		padding: 30px;
+		padding: 10px;
 		padding-top: 0;
 		border: 3px solid white;
 		box-sizing: border-box;
@@ -205,7 +215,7 @@
 	.header-doctor-schedule h1
 	{
 		margin-top: 20px;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		font-size: 20px;
 		font-style: italic;
 		color: #E62A3D;
@@ -216,20 +226,22 @@
 	.btn-outline-info
 	{
 		color: #E62A3D;
-		border-color: #E62A3D;
-		margin-top: 20px;
+		width: 100%;
+		height: 40px;
+		border:none;
 	}
 
 	.btn-outline-info:hover
 	{
 		background-color: #E62A3D;
-		border-color: #E62A3D;
+		height: 40px;
+		border:none;
 	}
 
 	.card-kiri
 	{
-		width: 170px;
-		height: 170px;
+		width: 180px;
+		height: 180px;
 		margin-right: 15px;
 		background-image: url(../img/booking/doctor/background.png);
 		background-size: cover;
@@ -237,8 +249,8 @@
 	
 	.pict-doctor
 	{
-		width: 90px;
-		height: 90px;
+		width: 180px;
+		height: 180px;
 		margin-top: 40px;
 	}
 
@@ -258,7 +270,7 @@
 
 	.sertifikat
 	{
-		width: 95px;
+		width: 100%;
 	}
 
 	.sertifikat-font
@@ -307,7 +319,7 @@
 	.header-doctor-schedule h1
 	{
 		margin-top: 20px;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		font-size: 18px;
 		font-style: italic;
 		color: #E62A3D;
@@ -318,14 +330,16 @@
 	.btn-outline-info
 	{
 		color: #E62A3D;
-		border-color: #E62A3D;
-		margin-top: 20px;
+		width: 100%;
+		height: 40px;
+		border:none;
 	}
 
 	.btn-outline-info:hover
 	{
 		background-color: #E62A3D;
-		border-color: #E62A3D;
+		height: 40px;
+		border:none;
 	}
 
 	.card-kiri
@@ -360,7 +374,7 @@
 
 	.sertifikat
 	{
-		width: 95px;
+		width: 100%;
 	}
 
 	.sertifikat-font
@@ -389,7 +403,111 @@
 	}
 }
 
-/*@media (max-width: 575px) 
+@media (max-width: 575px) 
 { 
+	.doctor-schedule
+	{
+		width: 100%;
+		padding: 10px;
+		padding-top: 0;
+		border: 3px solid white;
+		box-sizing: border-box;
+		margin-bottom: 8px;
+		background-image: url(../img/booking/spesialisasi/spesialisasi.png);
+		background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
 
-}*/
+	.doctor-schedule-row
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	.header-doctor-schedule h1
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-size: 18px;
+		font-style: italic;
+		color: #E62A3D;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.btn-outline-info
+	{
+		color: #E62A3D;
+		width: 100%;
+		height: 40px;
+		border:none;
+	}
+
+	.btn-outline-info:hover
+	{
+		background-color: #E62A3D;
+		height: 40px;
+		border:none;
+	}
+
+	.card-kiri
+	{
+		width: 130px;
+		height: 130px;
+		margin-right: 10px;
+		background-image: url(../img/booking/doctor/background.png);
+		background-size: cover;
+	}
+	
+	.pict-doctor
+	{
+		width: 70px;
+		height: 70px;
+		margin-top: 30px;
+	}
+
+	.margin-top-card-title
+	{
+		margin-top: 0;
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+
+	.card-title
+	{
+		margin-top: 10px;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	.sertifikat
+	{
+		width: 100%;
+	}
+
+	.sertifikat-font
+	{
+		font-size: 16px;
+	}
+
+	.card-header-font
+	{
+		font-size: 16px;
+	}
+
+	.card-text
+	{
+		font-size: 13px;
+	}
+
+	.custom-control-description-font
+	{
+		font-size: 13px;
+	}
+
+	.card-padding
+	{
+		padding: 0;
+	}
+}
